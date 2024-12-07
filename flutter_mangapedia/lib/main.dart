@@ -24,12 +24,14 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Login',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue)),
-    //   home: isLoggedIn ? const MainScreen() : const LoginScreen(),
-    //   routes: {
-    //     '/login': (context) => const LoginScreen(),
-    //     '/home': (context) => const MainScreen()
-    //  },
-      home: DetailScreen(manga: mangaList[0]),
+      home: isLoggedIn ? const MainScreen() : const LoginScreen(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/home': (context) => const MainScreen()
+     },
+    //home: const HomeScreen(),
+    //  home: DetailScreen(manga: mangaList[0]),
     );
+
   }
 }

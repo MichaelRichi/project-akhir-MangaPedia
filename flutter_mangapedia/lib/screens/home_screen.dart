@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mangapedia/data/manga_data.dart';
 import 'package:flutter_mangapedia/models/manga.dart';
+import 'package:flutter_mangapedia/screens/detail_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: const Text('Home')),
+        title: const Center(child: Text('Home',style: TextStyle(fontWeight: FontWeight.bold))),
         actions: [
           IconButton(
             onPressed: (){
@@ -47,52 +48,66 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: mangaList.length,
                 itemBuilder: (context, index) {
                   Manga varManga = mangaList[index];
-                  return Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16)
-                    ),
-                    margin: const EdgeInsets.all(6),
-                    // kemiringan
-                    elevation: 1,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        //Gambar Tempat
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: Image.asset(
-                              varManga.imageAsset,
-                              fit: BoxFit.cover,
-                            ),
-                          )),
-                          //Nama Tempat
-                          Padding(padding: const EdgeInsets.only(left: 16,top: 8),
-                          child: Text(
-                            varManga.title,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold
+                  return MouseRegion(
+                    cursor: SystemMouseCursors.click, // Menjadikan kursor klik
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(manga: varManga),
+                          ),
+                        );
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      margin: const EdgeInsets.all(6),
+                      // kemiringan
+                      elevation: 1,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          //Gambar Tempat
+                          Expanded(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: Image.asset(
+                                varManga.imageAsset,
+                                fit: BoxFit.cover,
+                              ),
+                            )),
+                            //Nama Tempat
+                            Padding(padding: const EdgeInsets.only(left: 16,top: 8),
+                            child: Text(
+                              varManga.title,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold
+                              ),
                             ),
                           ),
-                        ),
-                        //Lokasi Tempat
-                        Padding(padding: const EdgeInsets.only(left: 16,bottom: 8),
-                          child: Text(
-                            varManga.chapter,
-                            style: const TextStyle(
-                              fontSize: 12,
+                          //Lokasi Tempat
+                          Padding(padding: const EdgeInsets.only(left: 16,bottom: 8),
+                            child: Text(
+                              varManga.chapter,
+                              style: const TextStyle(
+                                fontSize: 12,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
+                      ),
                     ),
                   );
                 },
-                )
+              )
             ],
           ),
-        )),
+        )
+      ),
     );
   }
 }

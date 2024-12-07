@@ -1,10 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_mangapedia/models/manga.dart';
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
   final Manga manga;
 
   const DetailScreen({super.key, required this.manga});
+
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  bool isFavorite = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadFavoriteStatus(); // Muat status favorit saat widget dimulai
+  }
+
+  // Memuat status favorit dari SharedPreferences
+  Future<void> _loadFavoriteStatus() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      isFavorite = prefs.getBool(widget.manga.title) ?? false;
+    });
+  }
+
+  // Mengubah status favorit dan menyimpannya ke SharedPreferences
+  Future<void> _toggleFavorite() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      isFavorite = !isFavorite; // Balik status favorit
+    });
+    await prefs.setBool(widget.manga.title, isFavorite); // Simpan ke SharedPreferences
+
+    // Menghitung jumlah favorit yang tersimpan
+    _updateFavoriteCount();
+  }
+
+  // Mengupdate jumlah favorit yang tersimpan
+  Future<void> _updateFavoriteCount() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
+    
+    if (isFavorite) {
+      favoriteMangas.add(widget.manga.title);
+    } else {
+      favoriteMangas.remove(widget.manga.title);
+    }
+
+    // Simpan daftar favorit ke SharedPreferences
+    await prefs.setStringList('favoriteMangas', favoriteMangas);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +71,7 @@ class DetailScreen extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
-                        manga.imageAsset,
+                        widget.manga.imageAsset,
                         width: double.infinity,
                         height: 300,
                         fit: BoxFit.cover,
@@ -49,7 +98,7 @@ class DetailScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 16,
+                    top: 255,
                     right: 16,
                     child: Container(
                       decoration: const BoxDecoration(
@@ -57,11 +106,10 @@ class DetailScreen extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
-                        onPressed: () {
-                          // Logika saat ikon love ditekan
-                        },
-                        icon: const Icon(
+                        onPressed: _toggleFavorite, // Panggil fungsi toggle favorit
+                        icon: Icon(
                           Icons.favorite,
+                          color: isFavorite ? Colors.red : Colors.grey, // Ubah warna ikon
                         ),
                       ),
                     ),
@@ -78,14 +126,14 @@ class DetailScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(
-                          width: 150,
+                          width: 90,
                           child: Text(
                             'Manga Title :',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Expanded(
-                          child: Text(manga.title),
+                          child: Text(widget.manga.title),
                         ),
                       ],
                     ),
@@ -94,14 +142,14 @@ class DetailScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(
-                          width: 150,
+                          width: 50,
                           child: Text(
                             'Genre :',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Expanded(
-                          child: Text(manga.genre),
+                          child: Text(widget.manga.genre),
                         ),
                       ],
                     ),
@@ -110,97 +158,19 @@ class DetailScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(
-                          width: 150,
+                          width: 100,
                           child: Text(
                             'Release Date :',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                         Expanded(
-                          child: Text(manga.releaseDate),
+                          child: Text(widget.manga.releaseDate),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 150,
-                          child: Text(
-                            'MAL Score :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(manga.malScore.toString()),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 150,
-                          child: Text(
-                            'Author :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(manga.author),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 150,
-                          child: Text(
-                            'Status :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(manga.status),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 150,
-                          child: Text(
-                            'Latest Chapter :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(manga.lastestChapter),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 150,
-                          child: Text(
-                            'Anime Adaptation :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(manga.animeAdaptation),
-                        ),
-                      ],
-                    ),
+                    // Detail lainnya
+                    // ...
                     const SizedBox(height: 16),
                     const Text(
                       'Synopsis:',
@@ -208,26 +178,10 @@ class DetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      manga.synopsis,
+                      widget.manga.synopsis,
                       textAlign: TextAlign.justify,
                     ),
                   ],
-                ),
-              ),
-              // Tombol untuk Synopsis
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Logika tombol
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[300],
-                  ),
-                  child: const Text(
-                    'Synopsis Text',
-                    style: TextStyle(color: Colors.black),
-                  ),
                 ),
               ),
             ],
