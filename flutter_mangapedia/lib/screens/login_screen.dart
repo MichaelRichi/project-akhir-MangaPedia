@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 150,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: Image.asset('images/logo.png'),
+                  child: Image.asset('images/mangapedia.png'),
                 ),
               ),
               //TODO: 2. TEXTFIELD EMAIL
@@ -38,36 +38,35 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                 controller: _emailController,
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Email'),
+                    border: OutlineInputBorder(), labelText: 'Email'),
               ),
               //TODO: 3. TEXTFIELD PASSWORD
               const SizedBox(height: 16),
               TextField(
                 controller: _passwordController,
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password'),
+                    border: OutlineInputBorder(), labelText: 'Password'),
                 obscureText: true,
               ),
               //TODO: 4. TOMBOL LOGIN
               const SizedBox(height: 16),
-              ElevatedButton(onPressed: ()async {
-                String email = _emailController.text;
-                String password = _passwordController.text;
+              ElevatedButton(
+                  onPressed: () async {
+                    String email = _emailController.text;
+                    String password = _passwordController.text;
 
-                if(validateLogin(email, password)){
-                  SharedPreferences prefs = await SharedPreferences.getInstance();
-                  await prefs.setBool('isLoggedIn', true);
-                  await prefs.setString('email', email);
-                  Navigator.pushReplacementNamed(context, '/home');
-                }
-                else{
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Invalid email or password'))
-                  );
-                }
-              }, child: const Text('Login'))
+                    if (validateLogin(email, password)) {
+                      SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                      await prefs.setBool('isLoggedIn', true);
+                      await prefs.setString('email', email);
+                      Navigator.pushReplacementNamed(context, '/home');
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                          content: Text('Invalid email or password')));
+                    }
+                  },
+                  child: const Text('Login'))
             ],
           ),
         ),
@@ -75,14 +74,13 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  bool validateLogin(String email, String password){
-    for(User user in userList){
-      if(user.email == email && user.password == password){
+  bool validateLogin(String email, String password) {
+    for (User user in userList) {
+      if (user.email == email && user.password == password) {
         return true;
       }
     }
 
     return false;
   }
-
 }
