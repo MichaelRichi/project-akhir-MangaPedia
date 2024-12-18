@@ -34,7 +34,8 @@ class _DetailScreenState extends State<DetailScreen> {
     setState(() {
       isFavorite = !isFavorite; // Balik status favorit
     });
-    await prefs.setBool(widget.manga.title, isFavorite); // Simpan ke SharedPreferences
+    await prefs.setBool(
+        widget.manga.title, isFavorite); // Simpan ke SharedPreferences
 
     // Menghitung jumlah favorit yang tersimpan
     _updateFavoriteCount();
@@ -44,7 +45,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Future<void> _updateFavoriteCount() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
-    
+
     if (isFavorite) {
       favoriteMangas.add(widget.manga.title);
     } else {
@@ -71,10 +72,10 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
-                        widget.manga.imageAsset,
+                        widget.manga.imageAsset, // Gambar manga dari model
                         width: double.infinity,
                         height: 300,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ),
@@ -106,10 +107,13 @@ class _DetailScreenState extends State<DetailScreen> {
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
-                        onPressed: _toggleFavorite, // Panggil fungsi toggle favorit
+                        onPressed:
+                            _toggleFavorite, // Panggil fungsi toggle favorit
                         icon: Icon(
                           Icons.favorite,
-                          color: isFavorite ? Colors.red : Colors.grey, // Ubah warna ikon
+                          color: isFavorite
+                              ? Colors.red
+                              : Colors.grey, // Ubah warna ikon
                         ),
                       ),
                     ),
@@ -118,67 +122,48 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
               // Detail Informasi Manga
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 90,
-                          child: Text(
-                            'Manga Title :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(widget.manga.title),
-                        ),
-                      ],
-                    ),
+                    // Manga Title
+                    _buildInfoRow('Manga Title', widget.manga.title),
                     const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 50,
-                          child: Text(
-                            'Genre :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(widget.manga.genre),
-                        ),
-                      ],
-                    ),
+                    // Chapter
+                    _buildInfoRow('Chapter', widget.manga.chapter),
                     const SizedBox(height: 8),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          width: 100,
-                          child: Text(
-                            'Release Date :',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(widget.manga.releaseDate),
-                        ),
-                      ],
-                    ),
-                    // Detail lainnya
-                    // ...
+                    // Genre
+                    _buildInfoRow('Genre', widget.manga.genre),
+                    const SizedBox(height: 8),
+                    // Release Date
+                    _buildInfoRow('Release Date', widget.manga.releaseDate),
+                    const SizedBox(height: 8),
+                    // MAL Score
+                    _buildInfoRow('MAL Score', widget.manga.malScore),
+                    const SizedBox(height: 8),
+                    // Author
+                    _buildInfoRow('Author', widget.manga.author),
+                    const SizedBox(height: 8),
+                    // Status
+                    _buildInfoRow('Status', widget.manga.status),
+                    const SizedBox(height: 8),
+                    // Latest Chapter
+                    _buildInfoRow(
+                        'Latest Chapter', widget.manga.lastestChapter),
+                    const SizedBox(height: 8),
+                    // Anime Adaptation
+                    _buildInfoRow(
+                        'Anime Adaptation', widget.manga.animeAdaptation),
                     const SizedBox(height: 16),
+                    // Synopsis
                     const Text(
                       'Synopsis:',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      widget.manga.synopsis,
+                      widget.manga.synopsis, // Menampilkan synopsis manga
                       textAlign: TextAlign.justify,
                     ),
                   ],
@@ -188,6 +173,32 @@ class _DetailScreenState extends State<DetailScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  // Membuat baris informasi dengan label dan nilai yang sejajar
+  Widget _buildInfoRow(String label, String value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 150, // Lebar tetap agar semua titik dua sejajar
+          child: Text(
+            '$label:', // Menambahkan titik dua
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value, // Menampilkan nilai
+            style: const TextStyle(
+              fontSize: 16,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

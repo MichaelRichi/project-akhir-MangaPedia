@@ -25,14 +25,19 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //TODO: 1. Logo Aplikasi
-              SizedBox(
-                width: 150,
-                height: 150,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.asset('images/mangapedia.png'),
+              Center(
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width *
+                      0.5, // 40% dari lebar layar
+                  height: MediaQuery.of(context).size.width *
+                      0.5, // 40% dari lebar layar
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset('images/mangapedia.png'),
+                  ),
                 ),
               ),
+
               //TODO: 2. TEXTFIELD EMAIL
               const SizedBox(height: 16),
               TextField(

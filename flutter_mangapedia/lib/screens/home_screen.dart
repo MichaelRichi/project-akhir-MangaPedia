@@ -23,46 +23,48 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Home',style: TextStyle(fontWeight: FontWeight.bold))),
+        title: const Center(
+            child: Text('Home', style: TextStyle(fontWeight: FontWeight.bold))),
         actions: [
           IconButton(
-            onPressed: (){
-              _logout(context);
-            }, icon: const Icon(Icons.logout))
+              onPressed: () {
+                _logout(context);
+              },
+              icon: const Icon(Icons.logout))
         ],
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              GridView.builder(
-                shrinkWrap: true,
-                // agar tdk saling scroll
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 8,
-                  mainAxisSpacing: 8,
-                  ), 
-                  padding: const EdgeInsets.all(8),
-                  itemCount: mangaList.length,
-                itemBuilder: (context, index) {
-                  Manga varManga = mangaList[index];
-                  return MouseRegion(
-                    cursor: SystemMouseCursors.click, // Menjadikan kursor klik
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailScreen(manga: varManga),
-                          ),
-                        );
-                      },
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            GridView.builder(
+              shrinkWrap: true,
+              // agar tdk saling scroll
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+              ),
+              padding: const EdgeInsets.all(8),
+              itemCount: mangaList.length,
+              itemBuilder: (context, index) {
+                Manga varManga = mangaList[index];
+                return MouseRegion(
+                  cursor: SystemMouseCursors.click, // Menjadikan kursor klik
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailScreen(manga: varManga),
                         ),
+                      );
+                    },
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                       margin: const EdgeInsets.all(6),
                       // kemiringan
                       elevation: 1,
@@ -71,25 +73,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           //Gambar Tempat
                           Expanded(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(16),
-                              child: Image.asset(
-                                varManga.imageAsset,
-                                fit: BoxFit.cover,
-                              ),
-                            )),
-                            //Nama Tempat
-                            Padding(padding: const EdgeInsets.only(left: 16,top: 8),
+                              child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.asset(
+                              varManga.imageAsset,
+                              fit: BoxFit.fill,
+                            ),
+                          )),
+                          //Nama Tempat
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 8),
                             child: Text(
                               varManga.title,
                               style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold
-                              ),
+                                  fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                           ),
                           //Lokasi Tempat
-                          Padding(padding: const EdgeInsets.only(left: 16,bottom: 8),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, bottom: 8),
                             child: Text(
                               varManga.chapter,
                               style: const TextStyle(
@@ -99,15 +101,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ],
                       ),
-                      ),
                     ),
-                  );
-                },
-              )
-            ],
-          ),
-        )
-      ),
+                  ),
+                );
+              },
+            )
+          ],
+        ),
+      )),
     );
   }
 }
