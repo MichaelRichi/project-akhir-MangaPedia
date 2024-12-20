@@ -17,62 +17,64 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 300),
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              //TODO: 1. Logo Aplikasi
-              Center(
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width *
-                      0.5, // 40% dari lebar layar
-                  height: MediaQuery.of(context).size.width *
-                      0.5, // 40% dari lebar layar
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Image.asset('images/mangapedia.png'),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            constraints: const BoxConstraints(maxWidth: 300),
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //TODO: 1. Logo Aplikasi
+                Center(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width *
+                        0.5, // 40% dari lebar layar
+                    height: MediaQuery.of(context).size.width *
+                        0.5, // 40% dari lebar layar
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.asset('images/mangapedia.png'),
+                    ),
                   ),
                 ),
-              ),
-
-              //TODO: 2. TEXTFIELD EMAIL
-              const SizedBox(height: 16),
-              TextField(
-                controller: _emailController,
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Email'),
-              ),
-              //TODO: 3. TEXTFIELD PASSWORD
-              const SizedBox(height: 16),
-              TextField(
-                controller: _passwordController,
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Password'),
-                obscureText: true,
-              ),
-              //TODO: 4. TOMBOL LOGIN
-              const SizedBox(height: 16),
-              ElevatedButton(
-                  onPressed: () async {
-                    String email = _emailController.text;
-                    String password = _passwordController.text;
-
-                    if (validateLogin(email, password)) {
-                      SharedPreferences prefs =
-                          await SharedPreferences.getInstance();
-                      await prefs.setBool('isLoggedIn', true);
-                      await prefs.setString('email', email);
-                      Navigator.pushReplacementNamed(context, '/home');
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                          content: Text('Invalid email or password')));
-                    }
-                  },
-                  child: const Text('Login'))
-            ],
+        
+                //TODO: 2. TEXTFIELD EMAIL
+                const SizedBox(height: 16),
+                TextField(
+                  controller: _emailController,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(), labelText: 'Email'),
+                ),
+                //TODO: 3. TEXTFIELD PASSWORD
+                const SizedBox(height: 16),
+                TextField(
+                  controller: _passwordController,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(), labelText: 'Password'),
+                  obscureText: true,
+                ),
+                //TODO: 4. TOMBOL LOGIN
+                const SizedBox(height: 16),
+                ElevatedButton(
+                    onPressed: () async {
+                      String email = _emailController.text;
+                      String password = _passwordController.text;
+        
+                      if (validateLogin(email, password)) {
+                        SharedPreferences prefs =
+                            await SharedPreferences.getInstance();
+                        await prefs.setBool('isLoggedIn', true);
+                        await prefs.setString('email', email);
+                        Navigator.pushReplacementNamed(context, '/home');
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                            content: Text('Invalid email or password')));
+                      }
+                    },
+                    child: const Text('Login'))
+              ],
+            ),
           ),
         ),
       ),

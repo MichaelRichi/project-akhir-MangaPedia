@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(16),
                             child: Image.asset(
                               varManga.imageAsset,
-                              fit: BoxFit.fill,
+                              fit: BoxFit.scaleDown,
                             ),
                           )),
                           //Nama Tempat
@@ -89,14 +89,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                           ),
-                          //Lokasi Tempat
+                          //Score
                           Padding(
                             padding: const EdgeInsets.only(left: 16, bottom: 8),
-                            child: Text(
-                              varManga.chapter,
-                              style: const TextStyle(
-                                fontSize: 12,
-                              ),
+                            child: Row(
+                              children: [
+                                const Icon(
+                                  Icons.star,
+                                  color: Colors.yellow,
+                                  size: 16,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  varManga.malScore,
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

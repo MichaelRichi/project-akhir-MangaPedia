@@ -1,6 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_mangapedia/models/manga.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailScreen extends StatefulWidget {
   final Manga manga;
@@ -17,10 +19,9 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
     super.initState();
-    _loadFavoriteStatus(); // Muat status favorit saat widget dimulai
+    _loadFavoriteStatus();
   }
 
-  // Memuat status favorit dari SharedPreferences
   Future<void> _loadFavoriteStatus() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -28,32 +29,36 @@ class _DetailScreenState extends State<DetailScreen> {
     });
   }
 
-  // Mengubah status favorit dan menyimpannya ke SharedPreferences
   Future<void> _toggleFavorite() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      isFavorite = !isFavorite; // Balik status favorit
+      isFavorite = !isFavorite;
     });
-    await prefs.setBool(
-        widget.manga.title, isFavorite); // Simpan ke SharedPreferences
-
-    // Menghitung jumlah favorit yang tersimpan
-    _updateFavoriteCount();
-  }
-
-  // Mengupdate jumlah favorit yang tersimpan
-  Future<void> _updateFavoriteCount() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
-
     if (isFavorite) {
       favoriteMangas.add(widget.manga.title);
     } else {
       favoriteMangas.remove(widget.manga.title);
     }
-
-    // Simpan daftar favorit ke SharedPreferences
     await prefs.setStringList('favoriteMangas', favoriteMangas);
+  }
+
+  Future<void> _launchMangaLink(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  void _showFullImage(BuildContext context, String imageUrl) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FullScreenImagePage(imageUrl: imageUrl),
+      ),
+    );
   }
 
   @override
@@ -64,7 +69,6 @@ class _DetailScreenState extends State<DetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Gambar Utama dengan Ikon Love dan Tombol Back
               Stack(
                 children: [
                   Padding(
@@ -72,10 +76,10 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
-                        widget.manga.imageAsset, // Gambar manga dari model
+                        widget.manga.imageAsset,
                         width: double.infinity,
                         height: 300,
-                        fit: BoxFit.contain,
+                        fit: BoxFit.scaleDown,
                       ),
                     ),
                   ),
@@ -88,9 +92,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
+                        onPressed: () => Navigator.pop(context),
                         icon: const Icon(
                           Icons.arrow_back,
                           color: Colors.white,
@@ -107,64 +109,124 @@ class _DetailScreenState extends State<DetailScreen> {
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
-                        onPressed:
-                            _toggleFavorite, // Panggil fungsi toggle favorit
+                        onPressed: _toggleFavorite,
                         icon: Icon(
                           Icons.favorite,
-                          color: isFavorite
-                              ? Colors.red
-                              : Colors.grey, // Ubah warna ikon
+                          color: isFavorite ? Colors.red : Colors.grey,
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-              // Detail Informasi Manga
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Manga Title
                     _buildInfoRow('Manga Title', widget.manga.title),
-                    const SizedBox(height: 8),
-                    // Chapter
                     _buildInfoRow('Chapter', widget.manga.chapter),
-                    const SizedBox(height: 8),
-                    // Genre
                     _buildInfoRow('Genre', widget.manga.genre),
-                    const SizedBox(height: 8),
-                    // Release Date
                     _buildInfoRow('Release Date', widget.manga.releaseDate),
-                    const SizedBox(height: 8),
-                    // MAL Score
                     _buildInfoRow('MAL Score', widget.manga.malScore),
-                    const SizedBox(height: 8),
-                    // Author
                     _buildInfoRow('Author', widget.manga.author),
-                    const SizedBox(height: 8),
-                    // Status
                     _buildInfoRow('Status', widget.manga.status),
-                    const SizedBox(height: 8),
-                    // Latest Chapter
-                    _buildInfoRow(
-                        'Latest Chapter', widget.manga.lastestChapter),
-                    const SizedBox(height: 8),
-                    // Anime Adaptation
+                    _buildInfoRow('Serialization', widget.manga.serialization),
                     _buildInfoRow(
                         'Anime Adaptation', widget.manga.animeAdaptation),
                     const SizedBox(height: 16),
-                    // Synopsis
                     const Text(
                       'Synopsis:',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      widget.manga.synopsis, // Menampilkan synopsis manga
+                      widget.manga.synopsis,
                       textAlign: TextAlign.justify,
+                    ),
+
+                    // tombol baca manga
+                    const SizedBox(height: 16),
+                    ElevatedButton.icon(
+                      onPressed: () => _launchMangaLink(widget.manga.mangaLink),
+                      icon: const Icon(
+                        Icons.open_in_browser,
+                        size:
+                            20, // Ukuran ikon yang tetap kecil untuk kesan minimalis
+                      ),
+                      label: const Text(
+                        'Read Manga',
+                        style: TextStyle(
+                          fontSize: 16, // Ukuran teks sedikit lebih kecil
+                          fontWeight: FontWeight.w500, // Teks lebih ringan
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors
+                            .blueAccent, // Latar belakang dengan warna ungu muda
+                        foregroundColor:
+                            Colors.white, // Warna teks dan ikon menjadi putih
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                              30), // Bentuk lebih melengkung untuk kesan lembut
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 12,
+                            horizontal: 20), // Padding yang proporsional
+                        elevation: 5, // Tambahkan bayangan halus untuk efek 3D
+                        shadowColor: Colors.deepPurple.withOpacity(
+                            0.4), // Warna bayangan disesuaikan dengan tema
+                      ),
+                    ),
+
+                    // gallery
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Gallery',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      height: 100,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: widget.manga.imageUrls.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: GestureDetector(
+                              onTap: () => _showFullImage(
+                                  context, widget.manga.imageUrls[index]),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(
+                                    color: Colors.deepPurple.shade100,
+                                    width: 2,
+                                  ),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: CachedNetworkImage(
+                                    imageUrl: widget.manga.imageUrls[index],
+                                    height: 120,
+                                    width: 120,
+                                    fit: BoxFit.cover,
+                                    placeholder: (context, url) => Container(
+                                      width: 120,
+                                      height: 120,
+                                      color: Colors.deepPurple[50],
+                                    ),
+                                    errorWidget: (context, url, error) =>
+                                        const Icon(Icons.error),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -176,29 +238,96 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 
-  // Membuat baris informasi dengan label dan nilai yang sejajar
   Widget _buildInfoRow(String label, String value) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 150, // Lebar tetap agar semua titik dua sejajar
-          child: Text(
-            '$label:', // Menambahkan titik dua
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 150,
+            child: Text(
+              '$label:',
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-        ),
-        Expanded(
-          child: Text(
-            value, // Menampilkan nilai
-            style: const TextStyle(
-              fontSize: 16,
+          Expanded(
+            child: Text(
+              value,
+              style: const TextStyle(fontSize: 16),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
+  }
+}
+
+class FullScreenImagePage extends StatefulWidget {
+  final String imageUrl;
+
+  const FullScreenImagePage({super.key, required this.imageUrl});
+
+  @override
+  _FullScreenImagePageState createState() => _FullScreenImagePageState();
+}
+
+class _FullScreenImagePageState extends State<FullScreenImagePage>
+    with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _scaleAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 400),
+    );
+    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.easeOut,
+      ),
+    );
+    _controller.forward();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: Center(
+          child: AnimatedBuilder(
+            animation: _scaleAnimation,
+            builder: (context, child) {
+              return Transform.scale(
+                scale: _scaleAnimation.value,
+                child: CachedNetworkImage(
+                  imageUrl: widget.imageUrl,
+                  fit: BoxFit.contain,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  placeholder: (context, url) =>
+                      const CircularProgressIndicator(
+                    color: Colors.deepPurple,
+                  ),
+                  errorWidget: (context, url, error) =>
+                      const Icon(Icons.error, color: Colors.white),
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }

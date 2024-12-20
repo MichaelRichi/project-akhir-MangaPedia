@@ -6,10 +6,11 @@ class Manga {
   final String malScore;
   final String author;
   final String status;
-  final String lastestChapter;
+  final String serialization;
   final String animeAdaptation;
   final String synopsis;
   final String imageAsset;
+  final String mangaLink;
   final List<String> imageUrls;
 
   Manga({
@@ -20,10 +21,11 @@ class Manga {
     required this.malScore,
     required this.author,
     required this.status,
-    required this.lastestChapter,
+    required this.serialization,
     required this.animeAdaptation,
     required this.synopsis,
     required this.imageAsset,
-    required this.imageUrls,
+    required this.imageUrls, 
+    required this.mangaLink,
   });
 }

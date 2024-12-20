@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   shared_preferences:
+  cached_network_image:
+  url_launcher:
 
 dev_dependencies:
   flutter_test:
