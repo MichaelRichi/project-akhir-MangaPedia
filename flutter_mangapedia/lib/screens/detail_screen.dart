@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mangapedia/screens/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_mangapedia/models/manga.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -33,14 +34,32 @@ class _DetailScreenState extends State<DetailScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       isFavorite = !isFavorite;
+      prefs.setBool(widget.manga.title, isFavorite);
     });
+
     List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
+    String message;
+
     if (isFavorite) {
       favoriteMangas.add(widget.manga.title);
+      message = "${widget.manga.title} telah ditambahkan ke favorit.";
     } else {
       favoriteMangas.remove(widget.manga.title);
+      message = "${widget.manga.title} telah dihapus dari favorit.";
     }
     await prefs.setStringList('favoriteMangas', favoriteMangas);
+    await prefs.setBool(widget.manga.title, isFavorite);
+
+    // Snackbar
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(message),
+          duration: const Duration(seconds: 2),
+          backgroundColor: isFavorite ? Colors.green : Colors.red,
+        ),
+      );
+    }
   }
 
   Future<void> _launchMangaLink(String url) async {
@@ -108,8 +127,14 @@ class _DetailScreenState extends State<DetailScreen> {
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
+                      // Tombol favorit
                       child: IconButton(
-                        onPressed: _toggleFavorite,
+                        onPressed: () {
+                          _toggleFavorite().then((_) {
+                            Navigator.pop(context,
+                                true); // Kirim 'true' saat favorit diubah
+                          });
+                        },
                         icon: Icon(
                           Icons.favorite,
                           color: isFavorite ? Colors.red : Colors.grey,

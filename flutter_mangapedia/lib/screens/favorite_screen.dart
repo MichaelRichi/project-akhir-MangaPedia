@@ -90,14 +90,18 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                               ),
                               const SizedBox(height: 4),
                               ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
+                                onPressed: () async{
+                                  final result = await Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
                                           DetailScreen(manga: manga),
                                     ),
                                   );
+                                  // Refresh data favorit setelah kembali dari DetailScreen
+                                    if (result == true) {
+                                      _loadFavoriteManga();
+                                    } 
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.grey[200],
