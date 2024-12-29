@@ -42,7 +42,9 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('My Favorite',style: TextStyle(fontWeight: FontWeight.bold),)),
+        title: const Center(
+            child: Text('My Favorite',
+                style: TextStyle(fontWeight: FontWeight.bold))),
       ),
       body: favoriteManga.isEmpty
           ? const Center(
@@ -53,77 +55,86 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
               itemCount: favoriteManga.length,
               itemBuilder: (context, index) {
                 Manga manga = favoriteManga[index];
-                return Card(
-                  elevation: 3,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  margin: const EdgeInsets.only(bottom: 16),
-                  child: Row(
-                    children: [
-                      // Gambar manga
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            manga.imageAsset,
-                            width: 80,
-                            height: 80,
-                            fit: BoxFit.cover,
-                          ),
+                return MouseRegion(
+                  cursor: SystemMouseCursors
+                      .click, // Menambahkan MouseRegion untuk kursor
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailScreen(manga: manga),
                         ),
+                      );
+                    },
+                    child: Card(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      // Nama dan detail manga
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                manga.title,
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
+                      margin: const EdgeInsets.only(bottom: 16),
+                      child: Row(
+                        children: [
+                          // Gambar manga
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.asset(
+                                manga.imageAsset,
+                                width: 80,
+                                height: 80,
+                                fit: BoxFit.cover,
                               ),
-                              const SizedBox(height: 4),
-                              ElevatedButton(
-                                onPressed: () async{
-                                  final result = await Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          DetailScreen(manga: manga),
+                            ),
+                          ),
+                          // Nama, Genre, dan info lainnya
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    manga.title,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
                                     ),
-                                  );
-                                  // Refresh data favorit setelah kembali dari DetailScreen
-                                    if (result == true) {
-                                      _loadFavoriteManga();
-                                    } 
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.grey[200],
-                                ),
-                                child: const Text(
-                                  'Details',
-                                  style: TextStyle(color: Colors.black),
-                                ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  // Menampilkan informasi chapter manga
+                                  Text(
+                                    'Chapter: ${manga.chapter}', // Menampilkan genre manga
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  // Menampilkan informasi genre manga
+                                  Text(
+                                    'Genre: ${manga.genre}', // Menampilkan genre manga
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          // Ikon favorit
+                          const Padding(
+                            padding: EdgeInsets.only(right: 8.0),
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
                       ),
-                      // Ikon favorit
-                      const Padding (
-                        padding:  EdgeInsets.only(right: 8.0),
-                        child: Icon(
-                          Icons.favorite,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 );
               },

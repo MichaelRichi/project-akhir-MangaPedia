@@ -60,6 +60,11 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
       );
     }
+    // Delay before navigating back to the previous page
+    if (mounted) {
+      await Future.delayed(
+          const Duration(milliseconds: 500)); // Delay for smooth transition // Pop after delay
+    }
   }
 
   Future<void> _launchMangaLink(String url) async {

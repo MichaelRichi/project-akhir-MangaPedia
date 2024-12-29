@@ -45,7 +45,7 @@ var mangaList = [
 ''',
     imageAsset: 'images/naruto.jpg',
     imageUrls: [
-      'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1435526149l/1846794.jpg',
+      'https://down-id.img.susercontent.com/file/id-11134207-7r98q-lm1m1wh6mm4s48',
       'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/11/naruto-manga-volume-45-cover-art.jpg',
       'https://m.media-amazon.com/images/I/71QxUxK-khL._AC_UF894,1000_QL80_.jpg',
       'https://ebooks.gramedia.com/ebook-covers/54816/image_highres/BLK_N52020833004.jpg',
