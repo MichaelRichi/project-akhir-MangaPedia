@@ -29,7 +29,7 @@ var mangaList = [
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100006',
   ),
   Manga(
-    title: 'Naruto ',
+    title: 'Naruto',
     chapter: '700',
     genre: 'Action, Adventure, Fantasy',
     releaseDate: 'September 21, 1999',

@@ -67,7 +67,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: (){
-
                 },
               
                 child: const Row(
@@ -87,8 +86,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             
-
-
               const SizedBox(height: 60),
               // Tampilkan Username
               Text(
@@ -104,17 +101,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
               const SizedBox(height: 30),
               // Tampilkan Jumlah Favorit
               Text(
-                'Favorite Count: $favoriteCount',
+                'Favorite Manga: $favoriteCount',
                 style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30),
               // Tombol Logout
               ElevatedButton(
-                onPressed: () {
-                  SharedPreferences.getInstance().then((prefs) {
-                    prefs.remove('email'); // Hapus email pengguna yang login
-                    Navigator.pushReplacementNamed(context, '/login');
-                  });
+                onPressed: () async {
+                  SharedPreferences prefs = await SharedPreferences.getInstance();
+                  prefs.remove('email'); // Hapus email pengguna yang login
+                  
+                  // Tampilkan pesan logout berhasil
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('You have successfully logged out!'),
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
+                  
+                  // Berikan delay sebelum navigasi ke halaman login
+                  await Future.delayed(const Duration(seconds: 1));
+                  
+                  // Navigasi ke halaman login setelah delay
+                  Navigator.pushReplacementNamed(context, '/login');
                 },
                 child: const Text('Log Out'),
               ),

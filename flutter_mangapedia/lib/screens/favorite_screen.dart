@@ -48,7 +48,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       ),
       body: favoriteManga.isEmpty
           ? const Center(
-              child: Text('No favorite manga yet.'),
+              child: Text('No favorite manga yet'),
             )
           : ListView.builder(
               padding: const EdgeInsets.all(16),
@@ -65,7 +65,11 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                         MaterialPageRoute(
                           builder: (context) => DetailScreen(manga: manga),
                         ),
-                      );
+                      ).then((updated) {
+                      if (updated == true) {
+                        _loadFavoriteManga(); // Perbarui daftar favorit
+                      }
+                    });
                     },
                     child: Card(
                       elevation: 3,

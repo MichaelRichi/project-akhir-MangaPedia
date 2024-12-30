@@ -42,10 +42,10 @@ class _DetailScreenState extends State<DetailScreen> {
 
     if (isFavorite) {
       favoriteMangas.add(widget.manga.title);
-      message = "${widget.manga.title} telah ditambahkan ke favorit.";
+      message = "${widget.manga.title} has been added to favorites";
     } else {
       favoriteMangas.remove(widget.manga.title);
-      message = "${widget.manga.title} telah dihapus dari favorit.";
+      message = "${widget.manga.title} has been removed from favorites";
     }
     await prefs.setStringList('favoriteMangas', favoriteMangas);
     await prefs.setBool(widget.manga.title, isFavorite);
@@ -136,8 +136,9 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: IconButton(
                         onPressed: () {
                           _toggleFavorite().then((_) {
-                            Navigator.pop(context,
-                                true); // Kirim 'true' saat favorit diubah
+                          if (!isFavorite) {
+                            Navigator.pop(context, true); // Mengirim nilai 'true' jika manga dihapus dari favorit
+                          } // Kirim 'true' saat favorit diubah
                           });
                         },
                         icon: Icon(
@@ -218,7 +219,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     const SizedBox(height: 10),
                     SizedBox(
-                      height: 100,
+                      height: 200,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: widget.manga.imageUrls.length,
@@ -240,12 +241,12 @@ class _DetailScreenState extends State<DetailScreen> {
                                   borderRadius: BorderRadius.circular(10),
                                   child: CachedNetworkImage(
                                     imageUrl: widget.manga.imageUrls[index],
-                                    height: 120,
-                                    width: 120,
-                                    fit: BoxFit.cover,
+                                    height: 200,
+                                    width: 150,
+                                    fit: BoxFit.fill,
                                     placeholder: (context, url) => Container(
-                                      width: 120,
-                                      height: 120,
+                                      width: 150,
+                                      height: 200,
                                       color: Colors.deepPurple[50],
                                     ),
                                     errorWidget: (context, url, error) =>

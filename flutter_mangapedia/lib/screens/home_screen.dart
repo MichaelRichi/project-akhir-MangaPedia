@@ -13,6 +13,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Manga> displayedManga = mangaList; // Daftar manga yang ditampilkan
+  TextEditingController searchController = TextEditingController();
+
+  // Fungsi untuk mencari manga berdasarkan nama
+  void _searchManga(String query) {
+    final results = mangaList
+        .where((manga) =>
+            manga.title.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    setState(() {
+      displayedManga = results;
+    });
+  }
 
   void _navigateToRankingScreen() {
     // Mengurutkan manga berdasarkan malScore secara descending (nilai tertinggi -> terendah)
@@ -33,15 +47,35 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Center(
-            child: Text('Home', style: TextStyle(fontWeight: FontWeight.bold))),
+          child: Text(
+            'Home',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // Search Bar
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: TextField(
+                  controller: searchController,
+                  decoration: InputDecoration(
+                    hintText: 'Search Manga...',
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  onChanged: _searchManga, // Panggil fungsi search saat teks berubah
+                ),
+              ),
               // Tombol RANKING MANGA
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
                 child: ElevatedButton(
                   onPressed: _navigateToRankingScreen,
                   style: ElevatedButton.styleFrom(
@@ -54,7 +88,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.emoji_events, size: 24, color: Colors.yellowAccent), // Ikon kiri
+                      Icon(Icons.emoji_events,
+                          size: 24, color: Colors.yellowAccent), // Ikon kiri
                       Text(
                         'TOP MANGA SERIES',
                         style: TextStyle(
@@ -63,7 +98,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.white, // Warna teks
                         ),
                       ),
-                      Icon(Icons.emoji_events, size: 24, color: Colors.yellowAccent), // Ikon kanan
+                      Icon(Icons.emoji_events,
+                          size: 24, color: Colors.yellowAccent), // Ikon kanan
                     ],
                   ),
                 ),
@@ -78,9 +114,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisSpacing: 8,
                 ),
                 padding: const EdgeInsets.all(8),
-                itemCount: mangaList.length,
+                itemCount: displayedManga.length,
                 itemBuilder: (context, index) {
-                  Manga varManga = mangaList[index];
+                  Manga varManga = displayedManga[index];
                   return MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
