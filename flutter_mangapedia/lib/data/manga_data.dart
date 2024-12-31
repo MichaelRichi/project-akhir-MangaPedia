@@ -25,6 +25,7 @@ var mangaList = [
       'https://static1.srcdn.com/wordpress/wp-content/uploads/2024/05/boruto-next-generations-manga-volume-10-naruto-sasuke-backed-by-jigen.jpg',
       'https://goldenapplecomics.com/cdn/shop/products/108933-hr.jpg?v=1706730721&width=493',
       'https://images.tokopedia.net/img/cache/700/VqbcmM/2023/7/31/f1f941fa-740c-4b7d-9783-089dc53b776f.jpg',
+      'https://mangadex.org/covers/46e530ce-0766-4cbd-b005-5e6fb0ba5e71/143198b5-58bd-49dd-b8d9-6060e8528e61.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100006',
   ),
@@ -45,10 +46,11 @@ var mangaList = [
 ''',
     imageAsset: 'images/naruto.jpg',
     imageUrls: [
-      'https://down-id.img.susercontent.com/file/id-11134207-7r98q-lm1m1wh6mm4s48',
-      'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/11/naruto-manga-volume-45-cover-art.jpg',
-      'https://m.media-amazon.com/images/I/71QxUxK-khL._AC_UF894,1000_QL80_.jpg',
-      'https://ebooks.gramedia.com/ebook-covers/54816/image_highres/BLK_N52020833004.jpg',
+      'https://mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/83104813-ce49-41a1-9764-491803884978.jpg.512.jpg',
+      'https://mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/389a6776-c822-4d77-aa6d-f010178d2b11.jpg.512.jpg',
+      'https://mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/7a1dd3c6-adfb-48b3-9160-f1f458701bd6.jpg.512.jpg',
+      'https://mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/cf2239f2-2e77-49ce-b1fe-1a96722edb52.jpg.512.jpg',
+      'https://mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/ad69ac0f-11cb-437c-ae69-ed62c534dc7c.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100018',
   ),
@@ -71,8 +73,9 @@ Dua puluh dua tahun kemudian, seorang pemuda bernama Monkey D. Luffy siap memula
     imageUrls: [
       'https://awsimages.detik.net.id/community/media/visual/2024/04/20/top-7-cover-terbaik-manga-one-piece-6_34.webp?w=375',
       'https://awsimages.detik.net.id/community/media/visual/2024/02/20/manga-one-piece-volume-108.jpeg?w=1200',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3Rma_V_mfduiLXtAXT1QBEuGQiSWG_60Mg&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwbTbYvfqtR01PM9daJh-MGS7HJ5s-9sSPfA&s',
+      'https://i.redd.it/whats-your-favourite-one-piece-manga-covers-v0-vrd7syozgotc1.jpg?width=640&format=pjpg&auto=webp&s=a160b409f9020ffcb27f1e3677b740c522b3fbf5',
+      'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421534442/one-piece-vol-28-9781421534442_hr.jpg',
+      'https://mangadex.org/covers/a1c7c817-4e59-43b7-9365-09675a149a6f/0f6532c5-4ac4-4129-a418-2767a45804ef.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100140',
   ),
@@ -95,10 +98,11 @@ Dua puluh dua tahun kemudian, seorang pemuda bernama Monkey D. Luffy siap memula
   ''',
     imageAsset: 'images/dragonball.jpg',
     imageUrls: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmLSkFvwqKpT74EUFUNhXP-7QU90EwJUu8Hw&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvH9c1_unMb7Csb6C71vfRX7b-LWWJDD3MIw&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_xnC5MPmkK_FdAYlXYKpQFeg_24R1gTborA&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzRSV8rZYnjexzgiInlkHbD618hebsc25_dg&s',
+      'https://mangadex.org/covers/40bc649f-7b49-4645-859e-6cd94136e722/a161690e-ce09-4653-8bdd-cd0e6be8a707.jpg.512.jpg',
+      'https://mangadex.org/covers/40bc649f-7b49-4645-859e-6cd94136e722/88a0b087-8713-4ecb-bcef-fe9678588e1c.jpg.512.jpg',
+      'https://mangadex.org/covers/40bc649f-7b49-4645-859e-6cd94136e722/f79f078d-7f8f-46f9-b2d4-016f4c7abc83.jpg.512.jpg',
+      'https://mangadex.org/covers/40bc649f-7b49-4645-859e-6cd94136e722/f07416b7-1338-4488-91aa-c837c9ee630f.jpg.512.jpg',
+      'https://mangadex.org/covers/40bc649f-7b49-4645-859e-6cd94136e722/2f13c474-a9d4-48dd-a843-66a345ac62ee.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100011',
   ),
@@ -121,13 +125,14 @@ Kini menjadi seorang Shinigami, Ichigo harus mengambil alih tugas Rukia untuk me
     imageUrls: [
       'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421542980/bleach-vol-45-9781421542980_hr.jpg',
       'https://tradejapanstore.com/cdn/shop/products/9784088738833.jpg?v=1683249649',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgV1YhIk6ceVJQsHAWJN7Te0cu7wtSHy12bw&s',
+      'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421510439/bleach-vol-19-9781421510439_hr.jpg',
       'https://i.redd.it/mfsssge0xhpa1.png',
+      'https://mangadex.org/covers/a460ab18-22c1-47eb-a08a-9ee85fe37ec8/8316b8bb-6186-404c-9f6c-71d1429f28c7.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100004',
   ),
   Manga(
-    title: 'Attack on Titan',
+    title: 'Shingeki no Kyojin (Attack on Titan)',
     chapter: '141',
     genre: 'Action, Drama, Military',
     releaseDate: 'Sep 9, 2009',
@@ -135,7 +140,7 @@ Kini menjadi seorang Shinigami, Ichigo harus mengambil alih tugas Rukia untuk me
     author: 'Isayama, Hajime (Story & Art)',
     status: 'Finished',
     serialization: 'Bessatsu Shounen Magazine',
-    animeAdaptation: 'Attack on Titan Season 1 (2013), 2 (2017), 3 (2018), 4: The Final Season (2020)',
+    animeAdaptation: 'Attack on Titan Season 1 (2013), Season 2 (2017), Season 3 (2018), Season 4: The Final Season (2020)',
     synopsis: '''
 Ratusan tahun yang lalu, makhluk-makhluk mengerikan yang menyerupai manusia muncul. Para raksasa tak berakal ini, yang disebut Titan, menjadi ancaman eksistensial karena memangsa manusia tanpa henti untuk memuaskan nafsu makan mereka yang tampaknya tidak berujung. Tidak mampu melawan Titan secara efektif, umat manusia terpaksa mengurung diri mereka di dalam tembok besar yang mengelilingi apa yang diyakini sebagai tempat perlindungan terakhir bagi umat manusia di dunia.
 
@@ -143,10 +148,11 @@ Di masa kini, kehidupan di dalam tembok telah menemukan kedamaian, karena para p
   ''',
     imageAsset: 'images/AOT.jpg',
     imageUrls: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFX--1O8nHZK2BWtD5AHopUhIEYkxMyAj6xw&s',
-      'https://qph.cf2.quoracdn.net/main-qimg-700100dab33cb8f741dbd3561412c47d-lq',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcdLrOvNCwgJcLRRFBYlYJnhuvx7hd4E04A&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF1cXo6Pdnu1ZgganQ-DsTRQF_U_9yxHYQAg&s',
+      'https://mangadex.org/covers/304ceac3-8cdb-4fe7-acf7-2b6ff7a60613/39287f50-6c03-4bca-9b2f-3f188182740d.jpg.512.jpg',
+      'https://mangadex.org/covers/304ceac3-8cdb-4fe7-acf7-2b6ff7a60613/612334f7-60d5-4bc3-8722-3e3a36b4915b.jpg.512.jpg',
+      'https://mangadex.org/covers/304ceac3-8cdb-4fe7-acf7-2b6ff7a60613/1344b82a-2d70-4e6c-b5ae-a78598d53a7d.jpg.512.jpg',
+      'https://mangadex.org/covers/304ceac3-8cdb-4fe7-acf7-2b6ff7a60613/42ef428e-380b-4b9a-91be-eabce8cf5217.jpg.512.jpg',
+      'https://mangadex.org/covers/304ceac3-8cdb-4fe7-acf7-2b6ff7a60613/628b5f74-4692-47d6-8fe3-75813714b433.jpg.512.jpg',
     ],
     mangaLink: 'https://komiku.id/manga/shingeki-no-kyojin/',
   ),
@@ -167,10 +173,11 @@ Setelah menyaksikan kekuatan luar biasa Saitama, Genos, seorang cyborg, bertekad
 ''',
     imageAsset: 'images/OPM.jpg',
     imageUrls: [
-      'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421598062/one-punch-man-vol-13-9781421598062_hr.jpg',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc8iEarg6Ocmp7RwoMIGJBqm1HTrs7n_scPw&s',
+      'https://mangadex.org/covers/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3/fd109385-623d-46fe-b908-aedc4528a35c.jpg.512.jpg',
+      'https://mangadex.org/covers/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3/519524f9-41ab-44f6-9571-1b71752e7771.jpg.512.jpg',
       'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974748877/one-punch-man-vol-29-9781974748877_hr.jpg',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8mqTq7XAnFsnsufTpj4WfgELWPx-SQvi15Q&s',
+      'https://mangadex.org/covers/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3/2cbe74aa-1fff-4f47-ad90-2737f2f92fc2.jpg.512.jpg',
+      'https://mangadex.org/covers/d8a959f7-648e-4c8d-8f23-f1f3f8e129f3/deac0468-7241-4a81-a2ac-159dafa9798f.jpg.512.jpg',
     ],
     mangaLink: 'https://komiku.id/manga/manga-one-punch-man/',
   ),
@@ -193,10 +200,11 @@ Ditahan dan dijatuhi hukuman mati, Yuuji bertemu dengan Satoru Gojou—seorang g
   ''',
     imageAsset: 'images/JJK.jpg',
     imageUrls: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMqPG1OtsRyyfnbK8vTpblBm6Y2lWM2GbKzw&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZWSZIcTTtWuLBnpOtfK96VPie_G8a_fsp2w&s',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHcs4gAs3ayusy9A8Rr3UT45e41VJc-YciTA&s',
+      'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974718719/jujutsu-kaisen-vol-8-9781974718719_hr.jpg',
+      'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1731891013i/214983577.jpg',
+      'https://mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/c79009bf-5f96-438f-82d3-e71d2566d671.jpg.512.jpg',
       'https://japanresell.com/cdn/shop/files/jujutsu-kaisen-tome-30-precommande-728284_575x912.jpg?v=1731884439',
+      'https://mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/a504d77d-d584-4ee3-8908-38d83b864c10.jpg.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400002',
   ),
@@ -216,7 +224,7 @@ Dalam sebuah putaran nasib yang kejam, kehidupan Boruto dan Kawaki telah dipertu
     imageAsset: 'images/BTBV.jpg',
     imageUrls: [
       'https://m.media-amazon.com/images/I/71m3GTiT8FL._AC_UF1000,1000_QL80_.jpg',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-YimUFhz0CladSNXNLn2tD6KM46GQNQ2dAA&s',
+      'https://mangadex.org/covers/0b094aab-0cfb-4837-a49b-7267bdb86bec/b7586ada-6383-4748-becc-2f1c9cf8dfbe.jpg.512.jpg',
       'https://images.tokopedia.net/img/cache/700/VqbcmM/2024/9/2/02b9b50b-78aa-4c41-95fd-3f2ed10751ea.jpg',
       'https://pbs.twimg.com/media/GLTR-i5aoAIC-pb.png:large',
     ],
@@ -241,11 +249,139 @@ Dalam sebuah putaran nasib yang kejam, kehidupan Boruto dan Kawaki telah dipertu
   ''',
     imageAsset: 'images/HXH.jpg',
     imageUrls: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQdkX9L8H9xeiWzFw0bJZ67SaBXvOralepvQ&s',
+      'https://mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/6fd305c7-e351-4383-9f29-58d57dd71596.jpg.512.jpg',
       'https://mangamart.com/cdn/shop/products/Hunterxhunter_vol24_1024x.jpg?v=1642788872',
       'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421517889/hunter-x-hunter-vol-21-9781421517889_hr.jpg',
       'https://m.media-amazon.com/images/I/71lZN1eHgZL._AC_UF894,1000_QL80_.jpg',
+      'https://mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/06e9ce8f-1cd2-4cd1-821e-168eb58afe04.png.512.jpg',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100015',
   ),
+    Manga(
+    title: 'Spy x Family',
+    chapter: '108+ (Ongoing)',
+    genre: 'Action, Comedy, Family',
+    releaseDate: 'Mar 25, 2019',
+    malScore: '8.50',
+    author: 'Endou, Tatsuya (Story & Art)',
+    status: 'Ongoing',
+    serialization: 'Shounen Jump+',
+    animeAdaptation: 'Spy x Family (2022), Spy x Family Season 2 (2023), Spy x Family Season 3 (2025)',
+    synopsis: '''
+Bagi agen yang dikenal sebagai "Twilight," tidak ada tugas yang terlalu berat jika itu demi perdamaian. Sebagai mata-mata terbaik Westalis, Twilight bekerja tanpa lelah untuk mencegah ekstremis memicu perang dengan negara tetangga, Ostania. Dalam misi terbarunya, ia harus menyelidiki politisi Ostania, Donovan Desmond, dengan menyusup ke sekolah putranya: Akademi Eden yang bergengsi. Maka, agen ini menghadapi tantangan paling sulit dalam kariernya: menikah, memiliki anak, dan berpura-pura menjadi keluarga.
+
+Twilight, yang menggunakan nama samaran "Loid Forger," dengan cepat mengadopsi Anya, seorang anak yatim piatu yang tidak mencolok, untuk berperan sebagai putri berusia enam tahun dan calon siswa Akademi Eden. Untuk seorang istri, ia bertemu dengan Yor Briar, seorang pegawai kantoran yang pelupa yang juga membutuhkan pasangan pura-pura untuk mengesankan teman-temannya. Namun, Loid bukan satu-satunya yang memiliki identitas tersembunyi. Yor ternyata adalah seorang pembunuh mematikan yang dikenal sebagai "Thorn Princess." Bagi Yor, menikah dengan Loid adalah penyamaran yang sempurna. Sementara itu, Anya bukanlah gadis biasa seperti yang terlihat; ia adalah seorang esper, hasil eksperimen rahasia yang memungkinkannya membaca pikiran. Meski mengetahui identitas asli kedua orang tuanya, Anya sangat senang memiliki orang tua keren yang merupakan agen rahasia! Tentu saja, ia tidak akan pernah memberi tahu mereka, karena itu akan merusak keseruan.
+
+Di bawah kedok keluarga "Forger," mata-mata, pembunuh, dan esper ini harus berperan sebagai keluarga sambil menjalankan agenda masing-masing. Meskipun mereka hanya berpura-pura, mereka segera menyadari bahwa keluarga adalah sesuatu yang jauh lebih dalam daripada sekadar hubungan darah.
+  ''',
+    imageAsset: 'images/SXF.jpg',
+    imageUrls: [
+      'https://mangadex.org/covers/76eb5273-5869-4f5a-8b43-853f55efd6cd/90e06eea-5ffe-48fd-a5cd-82cc94f82b31.jpg.512.jpg',
+      'https://mangadex.org/covers/76eb5273-5869-4f5a-8b43-853f55efd6cd/e0e14388-9dc7-475e-880f-2a0d98ea11bd.jpg.512.jpg',
+      'https://mangadex.org/covers/76eb5273-5869-4f5a-8b43-853f55efd6cd/7bf72214-b2cf-4e0f-903d-b4ce02b45c48.jpg.512.jpg',
+      'https://mangadex.org/covers/76eb5273-5869-4f5a-8b43-853f55efd6cd/5fc68119-07ab-4876-8ca9-ee066047d4ed.jpg.512.jpg',
+      'https://mangadex.org/covers/76eb5273-5869-4f5a-8b43-853f55efd6cd/f3be1c10-e610-4b6e-a746-051954a702ef.jpg.512.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100143',
+  ),
+    Manga(
+    title: 'Death Note',
+    chapter: '108',
+    genre: 'Supernatural, Suspense, Psychological',
+    releaseDate: 'Dec 1, 2003',
+    malScore: '8.69',
+    author: 'Obata, Takeshi (Art), Ohba, Tsugumi (Story)',
+    status: 'Finished',
+    serialization: 'Weekly Shounen Jump',
+    animeAdaptation: 'Death Note (2006)',
+    synopsis: '''
+Ryuk, seorang dewa kematian, menjatuhkan Death Note ke dunia manusia demi kesenangannya sendiri. Di Jepang, seorang siswa SMA jenius bernama Light Yagami menemukan buku itu. Di dalamnya, terdapat pesan mengerikan: siapa pun yang namanya ditulis di dalamnya akan mati. Awalnya, Light merasa buku itu tidak masuk akal; namun, ketika ia menguji kekuatannya dengan menulis nama seorang kriminal, orang tersebut tiba-tiba tewas.
+
+Menyadari potensi luar biasa Death Note, Light memulai serangkaian pembunuhan dengan nama samaran "Kira," bertekad untuk membersihkan dunia dari individu korup dan menciptakan masyarakat sempurna di mana kejahatan tidak lagi ada. Namun, polisi segera menyadari keberadaan Kira dan meminta bantuan L—seorang detektif jenius—untuk mengungkap pelakunya.
+
+**Death Note** menceritakan kisah mendebarkan tentang pertarungan kecerdasan antara Light dan L, sebuah duel yang akan menentukan masa depan dunia.
+  ''',
+    imageAsset: 'images/DN.jpg',
+    imageUrls: [
+      'https://mangadex.org/covers/75ee72ab-c6bf-4b87-badd-de839156934c/14f108ed-7398-4396-a026-7a329c04fc28.jpg.512.jpg',
+      'https://mangadex.org/covers/75ee72ab-c6bf-4b87-badd-de839156934c/a2293788-279e-4849-ab75-dc324ee36161.jpg.512.jpg',
+      'https://mangadex.org/covers/75ee72ab-c6bf-4b87-badd-de839156934c/f082b9fe-0b9f-43d7-a5d9-b366f4cb49b3.jpg.512.jpg',
+      'https://mangadex.org/covers/75ee72ab-c6bf-4b87-badd-de839156934c/b88bc227-656b-48db-a4e1-fd6d502fdeac.jpg.512.jpg',
+      'https://mangadex.org/covers/75ee72ab-c6bf-4b87-badd-de839156934c/d6555598-8202-477d-acde-303202cb3475.jpg.512.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100008',
+  ),
+    Manga(
+    title: 'Boku no Hero Academia (My Hero Academia)',
+    chapter: '432',
+    genre: 'School, Super Power, Action',
+    releaseDate: 'Jul 7, 2014',
+    malScore: '7.97',
+    author: 'Horikoshi, Kouhei (Story & Art)',
+    status: 'Finished',
+    serialization: 'Weekly Shounen Jump',
+    animeAdaptation: 'Boku no Hero Academia (2016), 2nd Season (2017), 3rd Season (2018), 4th Season (2019), 5th Season (2021), 6th Season (2022)',
+    synopsis: '''
+Suatu hari, seorang anak laki-laki berusia empat tahun menyadari kenyataan pahit: dunia ini tidak adil. Delapan puluh persen populasi dunia memiliki kemampuan khusus yang disebut "quirk," yang memungkinkan banyak orang mewujudkan impian masa kecil mereka untuk menjadi pahlawan super. Sayangnya, Izuku Midoriya adalah salah satu dari sedikit orang yang lahir tanpa quirk, sehingga sering mengalami diskriminasi karenanya. Meski begitu, Izuku tidak pernah menyerah pada mimpinya untuk menjadi pahlawan; dengan tekad kuat untuk mencapai hal yang tampaknya mustahil, ia menargetkan akademi pelatihan pahlawan elit, UA High.
+
+Namun, segalanya berubah setelah pertemuan tak terduga dengan pahlawan nomor satu sekaligus idolanya, All Might. Mengetahui bahwa mimpinya masih bisa dicapai, Izuku menjalani pelatihan khusus dan bekerja lebih keras dari sebelumnya. Akhirnya, ia mewarisi kekuatan All Might, dan dengan kemampuan barunya, Izuku berhasil masuk ke sekolah impiannya. Di sanalah ia memulai perjalanan berat untuk menjadi penerus pahlawan terbaik di dunia.
+  ''',
+    imageAsset: 'images/BNH.jpg',
+    imageUrls: [
+      'https://mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/cd68400e-35c1-4eaf-a549-5be4b3e43e3f.jpg.512.jpg',
+      'https://mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/b3b8427d-9651-451a-9672-a73f32ad9d8b.jpg.512.jpg',
+      'https://mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/a02a0097-f158-45a1-bbe2-19e6ff05c46f.jpg.512.jpg',
+      'https://mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/2445d185-c3cf-4d09-a9c3-0d6f3505e095.jpg.512.jpg',
+      'https://mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/79e281ab-ceb1-4037-b9b5-4c0b71ce8593.jpg.512.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400001',
+  ),
+    Manga(
+    title: 'Kimetsu no Yaiba (Demon Slayer)',
+    chapter: '207',
+    genre: 'Action, Fantasy, Supernatural',
+    releaseDate: 'Feb 15, 2016',
+    malScore: '8.15',
+    author: 'Gotouge, Koyoharu (Story & Art)',
+    status: 'Finished',
+    serialization: 'Weekly Shounen Jump',
+    animeAdaptation: 'Kimetsu no Yaiba (2019), Mugen Train Arc and Entertainment District Arc (2021/2022), Swordsmith Village Arc (2023), Hashira Training Arc (2024)',
+    synopsis: '''
+Tanjirou Kamado tinggal bersama keluarganya yang miskin di sebuah gunung terpencil. Sebagai anak tertua, ia memikul tanggung jawab untuk menghidupi keluarganya setelah ayahnya meninggal. Suatu hari di musim dingin, ia pergi ke desa terdekat untuk menjual arang. Saat malam tiba, ia terpaksa bermalam di rumah seorang pria tua yang memperingatkannya tentang makhluk aneh yang berkeliaran di malam hari: iblis jahat yang haus akan daging manusia.
+
+Ketika akhirnya Tanjirou kembali ke rumah, mimpi buruk terburuknya menjadi kenyataan. Seluruh keluarganya telah dibantai dengan kejam, kecuali adiknya, Nezuko, yang berubah menjadi iblis pemakan manusia. Dipenuhi kebencian dan keputusasaan, Tanjirou berusaha keras menghentikan Nezuko menyerang orang lain. Ia pun memulai perjalanan untuk membalas dendam atas keluarganya dan mencari cara untuk mengembalikan Nezuko menjadi manusia.
+  ''',
+    imageAsset: 'images/DS.jpg',
+    imageUrls: [
+      'https://mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/9f713be4-59f5-4399-a410-5df2ee86ee6b.jpg.512.jpg',
+      'https://mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/1d063d96-c160-481f-ab7e-81311aee99b5.jpg.512.jpg',
+      'https://mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/28da5e95-2397-477b-a131-9ba29dbaeb2e.jpg.512.jpg',
+      'https://mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/cc8b13fa-3466-40bd-9fcd-35bfb4b842ea.jpg.512.jpg',
+      'https://mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/60530e72-f76f-45d5-b6f9-f95e05058fc3.png.512.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100009',
+  ),
+  //   Manga(
+  //   title: '4',
+  //   chapter: '',
+  //   genre: '',
+  //   releaseDate: '',
+  //   malScore: '',
+  //   author: '',
+  //   status: '',
+  //   serialization: '',
+  //   animeAdaptation: '',
+  //   synopsis: '''
+
+  // ''',
+  //   imageAsset: 'images/',
+  //   imageUrls: [
+  //     '',
+  //     '',
+  //     '',
+  //     '',
+  //     '',
+  //   ],
+  //   mangaLink: '',
+  // ),
 ];
