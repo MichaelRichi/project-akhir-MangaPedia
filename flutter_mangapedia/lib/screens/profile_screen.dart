@@ -21,6 +21,42 @@ class _ProfileScreenState extends State<ProfileScreen> {
     _loadLoggedInUser();
   }
 
+    // user info row
+    Widget _buildUserInfoRow(
+      IconData icon, Color iconColor, String label, String value) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 3,
+              child: Row(
+                children: [
+                  Icon(icon, color: iconColor),
+                  const SizedBox(width: 8),
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Text(
+                ": $value",
+                style: const TextStyle(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
+        const Divider(),
+      ],
+    );
+  }
+
   // Mengambil jumlah manga favorit dari SharedPreferences
   Future<void> _loadFavoriteCount() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -87,24 +123,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             
               const SizedBox(height: 60),
+
+              _buildUserInfoRow(Icons.email, Colors.amber, "Email", loggedInUser?.email ?? 'Loading...'),
+              _buildUserInfoRow(Icons.person, Colors.blue, "Name", loggedInUser?.name ?? 'Loading...'),
+              _buildUserInfoRow(Icons.favorite, Colors.red, "Favorite",
+                  "$favoriteCount"),
+              const SizedBox(height: 20),
               // Tampilkan Username
-              Text(
-                'Username: ${loggedInUser?.name ?? 'Loading...'}',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 10),
-              // Tampilkan Email
-              Text(
-                'Email: ${loggedInUser?.email ?? 'Loading...'}',
-                style: const TextStyle(fontSize: 18),
-              ),
-              const SizedBox(height: 30),
-              // Tampilkan Jumlah Favorit
-              Text(
-                'Favorite Manga: $favoriteCount',
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 30),
+              // Text(
+              //   'Username: ${loggedInUser?.name ?? 'Loading...'}',
+              //   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              // ),
+              // const SizedBox(height: 10),
+              // // Tampilkan Email
+              // Text(
+              //   'Email: ${loggedInUser?.email ?? 'Loading...'}',
+              //   style: const TextStyle(fontSize: 18),
+              // ),
+              // const SizedBox(height: 30),
+              // // Tampilkan Jumlah Favorit
+              // Text(
+              //   'Favorite Manga: $favoriteCount',
+              //   style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              // ),
+              // const SizedBox(height: 30),
+
               // Tombol Logout
               ElevatedButton(
                 onPressed: () async {
