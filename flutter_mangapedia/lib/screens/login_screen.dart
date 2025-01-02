@@ -1,8 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mangapedia/data/user_data.dart';
 import 'package:flutter_mangapedia/models/user.dart';
-import 'package:flutter_mangapedia/screens/register_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -74,36 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             content: Text('Invalid email or password')));
                       }
                     },
-                    child: const Text('Login')),
-
-                  const SizedBox(height: 20),
-                  // Link untuk Sign Up
-                  RichText(
-                    text: TextSpan(
-                      text: "Don't have an account?",
-                      style: const TextStyle(
-                          color: Colors.deepPurple, fontSize: 16),
-                      children: [
-                        TextSpan(
-                          text: " Register",
-                          style: const TextStyle(
-                            color: Colors.blue,
-                            fontSize: 16,
-                            decoration: TextDecoration.underline,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => RegisterScreen(),
-                                    ),
-                                  );
-                            },
-                        ),
-                      ],
-                    ),
-                  ),
+                    child: const Text('Login'))
               ],
             ),
           ),
