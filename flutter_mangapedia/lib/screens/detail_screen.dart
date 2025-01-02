@@ -177,7 +177,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
 
                     // tombol baca manga
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
                     ElevatedButton.icon(
                       onPressed: () => _launchMangaLink(widget.manga.mangaLink),
                       icon: const Icon(
