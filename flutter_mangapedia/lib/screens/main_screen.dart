@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mangapedia/screens/favorite_screen.dart';
 import 'package:flutter_mangapedia/screens/home_screen.dart';
-import 'package:flutter_mangapedia/screens/profile_screen.dart';
+import 'package:flutter_mangapedia/screens/profile_screen.dart'; // Ensure this import is correct
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   static const List<Widget> _screenOptions = <Widget>[
     HomeScreen(),
     FavoriteScreen(),
-    ProfileScreen()
+    ProfileScreen(), // Ensure this class name is correct
   ];
   void _onItemTapped(int index) {
     setState(() {

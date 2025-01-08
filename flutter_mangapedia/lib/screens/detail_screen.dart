@@ -16,28 +16,46 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreenState extends State<DetailScreen> {
   bool isFavorite = false;
+  String? loggedInUserEmail;
 
   @override
   void initState() {
     super.initState();
-    _loadFavoriteStatus();
-  }
-
-  Future<void> _loadFavoriteStatus() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      isFavorite = prefs.getBool(widget.manga.title) ?? false;
+    _loadLoggedInUser().then((email) {
+      setState(() {
+        loggedInUserEmail = email;
+      });
+      _loadFavoriteStatus();
     });
   }
 
+  Future<String?> _loadLoggedInUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString('email'); // Mendapatkan email user yang login
+  }
+
+  // Fungsi untuk memuat status favorit manga
+  Future<void> _loadFavoriteStatus() async {
+    if (loggedInUserEmail == null) return;
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      isFavorite = prefs.getBool('favorite_${loggedInUserEmail!}_${widget.manga.title}') ?? false;
+    });
+  }
+
+  // Fungsi untuk menambah atau menghapus manga dari daftar favorit
   Future<void> _toggleFavorite() async {
+    if (loggedInUserEmail == null) return;
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       isFavorite = !isFavorite;
-      prefs.setBool(widget.manga.title, isFavorite);
+      prefs.setBool('favorite_${loggedInUserEmail!}_${widget.manga.title}', isFavorite);
     });
 
-    List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
+    // Perbarui daftar manga favorit user
+    List<String> favoriteMangas = prefs.getStringList('favoriteMangas_${loggedInUserEmail!}') ?? [];
     String message;
 
     if (isFavorite) {
@@ -47,8 +65,7 @@ class _DetailScreenState extends State<DetailScreen> {
       favoriteMangas.remove(widget.manga.title);
       message = "${widget.manga.title} has been removed from favorites";
     }
-    await prefs.setStringList('favoriteMangas', favoriteMangas);
-    await prefs.setBool(widget.manga.title, isFavorite);
+    await prefs.setStringList('favoriteMangas_${loggedInUserEmail!}', favoriteMangas);
 
     // Snackbar
     if (mounted) {

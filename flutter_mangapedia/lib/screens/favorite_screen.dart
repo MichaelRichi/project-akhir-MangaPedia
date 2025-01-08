@@ -13,22 +13,52 @@ class FavoriteScreen extends StatefulWidget {
 
 class _FavoriteScreenState extends State<FavoriteScreen> {
   List<Manga> favoriteManga = [];
+  String? userEmail;
 
   @override
   void initState() {
     super.initState();
-    _loadFavoriteManga(); // Memuat data manga favorit
+    _loadUserEmail(); // Memuat email pengguna terlebih dahulu
   }
 
-  // Fungsi untuk memuat manga favorit dari SharedPreferences
-  Future<void> _loadFavoriteManga() async {
+  // Fungsi untuk memuat email pengguna
+  Future<void> _loadUserEmail() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<Manga> allManga = mangaList; // Daftar manga (diambil dari sumber data)
-    List<Manga> favorites = [];
+    String? email = prefs.getString('email'); // Ambil email pengguna dari SharedPreferences
+    if (email != null) {
+      setState(() {
+        userEmail = email;
+      });
+      _loadFavoriteManga(email); // Memuat data manga favorit berdasarkan email
+    } else {
+      print('No email found in SharedPreferences');
+    }
+  }
 
-    for (Manga manga in allManga) {
-      bool isFavorite = prefs.getBool(manga.title) ?? false;
-      if (isFavorite) {
+  // Fungsi untuk memuat manga favorit berdasarkan email pengguna
+  Future<void> _loadFavoriteManga(String email) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    List<String> favoriteMangaTitles = prefs.getStringList('favoriteMangas_$email') ?? [];
+    List<Manga> favorites = [];
+    // Cari manga yang sesuai dengan judul favorit
+    for (String title in favoriteMangaTitles) {
+      Manga? manga = mangaList.firstWhere((manga) => manga.title == title, orElse: () => Manga(
+        title: '',
+        chapter: "",
+        genre: '',
+        imageAsset: '',
+        releaseDate: '',
+        malScore: "",
+        author: '',
+        status: '',
+        serialization: '',
+        animeAdaptation: '',
+        synopsis: '',
+        imageUrls: [],
+        mangaLink: '',
+      ));
+      if (manga != null) {
         favorites.add(manga);
       }
     }
@@ -36,6 +66,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
     setState(() {
       favoriteManga = favorites;
     });
+
   }
 
   @override
@@ -46,103 +77,104 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             child: Text('My Favorite',
                 style: TextStyle(fontWeight: FontWeight.bold))),
       ),
-      body: favoriteManga.isEmpty
+      body: userEmail == null
           ? const Center(
               child: Text('No favorite manga yet'),
             )
-          : ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: favoriteManga.length,
-              itemBuilder: (context, index) {
-                Manga manga = favoriteManga[index];
-                return MouseRegion(
-                  cursor: SystemMouseCursors
-                      .click, // Menambahkan MouseRegion untuk kursor
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailScreen(manga: manga),
+          : favoriteManga.isEmpty
+              ? const Center(
+                  child: Text('No favorite manga yet'),
+                )
+              : ListView.builder(
+                  padding: const EdgeInsets.all(16),
+                  itemCount: favoriteManga.length,
+                  itemBuilder: (context, index) {
+                    Manga manga = favoriteManga[index];
+                    return MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailScreen(manga: manga),
+                            ),
+                          ).then((updated) {
+                            if (updated == true && userEmail != null) {
+                              _loadFavoriteManga(userEmail!); // Perbarui daftar favorit
+                            }
+                          });
+                        },
+                        child: Card(
+                          elevation: 3,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          margin: const EdgeInsets.only(bottom: 16),
+                          child: Row(
+                            children: [
+                              // Gambar manga
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.asset(
+                                    manga.imageAsset,
+                                    width: 80,
+                                    height: 80,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              // Nama, Genre, dan info lainnya
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        manga.title,
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        'Chapter: ${manga.chapter}',
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        'Genre: ${manga.genre}',
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(right: 8.0),
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: Colors.red,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ).then((updated) {
-                      if (updated == true) {
-                        _loadFavoriteManga(); // Perbarui daftar favorit
-                      }
-                    });
-                    },
-                    child: Card(
-                      elevation: 3,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
                       ),
-                      margin: const EdgeInsets.only(bottom: 16),
-                      child: Row(
-                        children: [
-                          // Gambar manga
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: Image.asset(
-                                manga.imageAsset,
-                                width: 80,
-                                height: 80,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          // Nama, Genre, dan info lainnya
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    manga.title,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 4),
-                                  // Menampilkan informasi chapter manga
-                                  Text(
-                                    'Chapter: ${manga.chapter}', // Menampilkan genre manga
-                                    style: const TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 4),
-                                  // Menampilkan informasi genre manga
-                                  Text(
-                                    'Genre: ${manga.genre}', // Menampilkan genre manga
-                                    style: const TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          // Ikon favorit
-                          const Padding(
-                            padding: EdgeInsets.only(right: 8.0),
-                            child: Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
+                    );
+                  },
+                ),
     );
   }
 }

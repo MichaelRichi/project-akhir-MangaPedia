@@ -19,17 +19,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Uint8List? profileImage; // Ganti File dengan Uint8List
 
   @override
-  void initState() {
-    super.initState();
-    _loadFavoriteCount();
-    _loadLoggedInUser();
-    _loadProfilePicture(); // Load gambar profil dari SharedPreferences
+void initState() {
+  super.initState();
+  _loadLoggedInUser().then((_) {
+    if (loggedInUser != null) {
+      _loadFavoriteCount(loggedInUser!.email); // Load jumlah favorit sesuai user
+      _loadProfilePicture(loggedInUser!.email); // Load gambar profil sesuai user
+    }
+  });
+}
+
+  // Fungsi untuk menyimpan data manga favorit berdasarkan email user
+  Future<void> _saveFavoriteMangas(String email, List<String> favoriteMangas) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setStringList('favoriteMangas_$email', favoriteMangas);
   }
 
-  // Fungsi untuk mengambil jumlah manga favorit dari SharedPreferences
-  Future<void> _loadFavoriteCount() async {
+  // Fungsi untuk memuat data manga favorit berdasarkan email user
+  Future<void> _loadFavoriteCount(String email) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> favoriteMangas = prefs.getStringList('favoriteMangas') ?? [];
+    List<String> favoriteMangas = prefs.getStringList('favoriteMangas_$email') ?? [];
     setState(() {
       favoriteCount = favoriteMangas.length;
     });
@@ -52,17 +61,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  // Fungsi untuk memuat gambar profil dari SharedPreferences
-  Future<void> _loadProfilePicture() async {
+  // Fungsi untuk menyimpan gambar profil berdasarkan email user
+  Future<void> _saveProfilePicture(String email, Uint8List imageBytes) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? imageBase64 = prefs.getString('profilePicture');
-
-    if (imageBase64 != null) {
-      setState(() {
-        profileImage = base64Decode(imageBase64);
-      });
-    }
+    prefs.setString('profilePicture_$email', base64Encode(imageBytes));
   }
+
+
+// Fungsi untuk memuat gambar profil berdasarkan email user
+  Future<void> _loadProfilePicture(String email) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? imageBase64 = prefs.getString('profilePicture_$email');
+
+  if (imageBase64 != null) {
+    setState(() {
+      profileImage = base64Decode(imageBase64);
+    });
+  } else {
+    setState(() {
+      profileImage = null; // Default jika tidak ada gambar
+    });
+  }
+}
 
   // Fungsi untuk memilih gambar profil menggunakan ImagePicker
   Future<void> _pickProfileImage() async {
@@ -72,11 +92,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (pickedFile != null) {
       Uint8List imageBytes = await pickedFile.readAsBytes();
 
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      prefs.setString('profilePicture', base64Encode(imageBytes)); // Simpan sebagai base64
+      if (loggedInUser != null) {
+        await _saveProfilePicture(loggedInUser!.email, imageBytes); // Simpan gambar profil
+      }
 
       setState(() {
-        profileImage = imageBytes; // Simpan data gambar di memori
+        profileImage = imageBytes; // Perbarui gambar di memori
       });
 
       ScaffoldMessenger.of(context).showSnackBar(
