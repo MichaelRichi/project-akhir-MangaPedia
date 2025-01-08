@@ -13,11 +13,11 @@ var mangaList = [
     serialization: 'Tonari no Young Jump',
     animeAdaptation: 'Boruto: Naruto Next Generations (2017)',
     synopsis: '''
-  Naruto Uzumaki akhirnya mencapai mimpinya menjadi Hokage, pemimpin Desa Konoha yang telah ia pertaruhkan segalanya untuk dilindungi selama masa remajanya. Kini, Naruto dan rekan-rekannya hidup di dunia yang damai, bekerja keras untuk menjaga perjanjian internasional yang dibangun di atas niat baik dan diplomasi.
+Naruto Uzumaki has finally achieved his dream of becoming Hokage, the leader of the Hidden Leaf Village that he spent his teenage years fighting to protect. Naruto and his peers now live in a world of peace, working hard to uphold an international truce built on good will and diplomacy.
 
-  Namun, kedamaian ini membawa harga yang berat bagi sang pahlawan yang mulai menua. Naruto dan para shinobi generasinya mendapati bahwa tugas menjaga dunia netral sering kali membuat mereka jauh dari keluarga. Bahkan para pejuang legendaris seperti mereka harus menghadapi kenyataan pahit menjadi orang tua yang tidak sempurna bagi anak-anak mereka yang penuh amarah, termasuk putranya sendiri, Boruto.
+However, this stasis comes at a personal cost for the aging hero. Naruto and the shinobi he grew up alongside find that working to upkeep the neutral world takes them away from their families, and even the legendary warriors of Naruto's generation must contend with being mediocre parents to their bitter children, including his own son Boruto.
 
-  Boruto Uzumaki hidup di dunia yang sepenuhnya berbeda dari yang dialami ayahnya. Beban besar sebagai anak Hokage membuatnya merasa tertekan, sementara jarak emosional dengan sang ayah hanya memperparah keadaan. Dalam perjuangannya menemukan jalan hidupnya sendiri, Boruto menghadapi ancaman baru yang dapat menghancurkan kedamaian yang telah diperjuangkan ayahnya. Akankah Boruto mampu menciptakan takdirnya sendiri dan melindungi dunia dari bayang-bayang kehancuran?
+Boruto Uzumaki faces a world completely unlike that of his father, finding unique trouble in the distance between the two. Contending with a society that heaps an unbearable load of pressure on his shoulders over his status as the Hokage's son, Boruto carves his own path through the world, fighting to make a name for himself as evil forces threaten to shatter the peace his father helped create.
 ''',
     imageAsset: 'images/boruto.jpg',
     imageUrls: [
@@ -40,9 +40,9 @@ var mangaList = [
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Naruto (2002), Naruto Shippuden (2007)',
     synopsis: '''
-  Setiap kali Naruto Uzumaki menyatakan bahwa suatu hari dia akan menjadi Hokage—gelar yang diberikan kepada ninja terbaik di Desa Konoha—tidak ada yang menganggapnya serius. Sejak lahir, Naruto dijauhi dan dicemooh oleh para penduduk desa. Namun, penghinaan mereka bukan karena Naruto keras kepala, nakal, atau tidak pandai dalam seni ninja, melainkan karena ada iblis di dalam dirinya. Sebelum Naruto lahir, Rubah Ekor Sembilan yang kuat dan mematikan menyerang desa. Untuk menghentikan amukan tersebut, Hokage Keempat mengorbankan nyawanya untuk menyegel iblis itu ke dalam tubuh Naruto yang baru lahir.
+Whenever Naruto Uzumaki proclaims that he will someday become the Hokage—a title bestowed upon the best ninja in the Village Hidden in the Leaves—no one takes him seriously. Since birth, Naruto has been shunned and ridiculed by his fellow villagers. But their contempt isn't because Naruto is loud-mouthed, mischievous, or because of his ineptitude in the ninja arts, but because there is a demon inside him. Prior to Naruto's birth, the powerful and deadly Nine-Tailed Fox attacked the village. In order to stop the rampage, the Fourth Hokage sacrificed his life to seal the demon inside the body of the newborn Naruto.
 
-  Ketika dia ditugaskan ke Tim 7—bersama rekan-rekan barunya, Sasuke Uchiha dan Sakura Haruno, di bawah bimbingan ninja veteran Kakashi Hatake—Naruto dipaksa untuk bekerja sama dengan orang lain untuk pertama kalinya dalam hidupnya. Melalui pelatihan yang keras dan menjalani misi-misi yang menantang, Naruto harus belajar apa arti bekerja dalam tim dan meniti jalannya sendiri untuk menjadi ninja sejati yang diakui oleh desanya.
+And so when he is assigned to Team 7—along with his new teammates Sasuke Uchiha and Sakura Haruno, under the mentorship of veteran ninja Kakashi Hatake—Naruto is forced to work together with other people for the first time in his life. Through undergoing vigorous training and taking on challenging missions, Naruto must learn what it means to work in a team and carve his own route toward becoming a full-fledged ninja recognized by his village.
 ''',
     imageAsset: 'images/naruto.jpg',
     imageUrls: [
@@ -65,9 +65,9 @@ var mangaList = [
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'One Piece (1999)',
     synopsis: '''
-  Gol D. Roger, seorang pria yang dikenal sebagai Raja Bajak Laut, akan dieksekusi oleh Pemerintah Dunia. Namun, tepat sebelum kematiannya, ia mengonfirmasi keberadaan harta karun besar bernama One Piece yang tersembunyi di suatu tempat di lautan luas yang dikenal sebagai Grand Line. Mengumumkan bahwa One Piece dapat dimiliki oleh siapa saja yang cukup layak untuk menemukannya, Raja Bajak Laut dieksekusi, dan Zaman Keemasan Bajak Laut pun dimulai.
+Gol D. Roger, a man referred to as the King of the Pirates, is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins.
 
-Dua puluh dua tahun kemudian, seorang pemuda bernama Monkey D. Luffy siap memulai petualangannya sendiri untuk mencari One Piece dan berjuang menjadi Raja Bajak Laut yang baru. Dengan hanya berbekal topi jerami, perahu kecil, dan tubuh elastis, ia memulai perjalanan luar biasa untuk mengumpulkan kru sendiri dan kapal yang layak untuk membawa mereka melintasi Grand Line demi meraih gelar tertinggi di lautan.
+Twenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.
 ''',
     imageAsset: 'images/onepiece.jpg',
     imageUrls: [
@@ -90,11 +90,11 @@ Dua puluh dua tahun kemudian, seorang pemuda bernama Monkey D. Luffy siap memula
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Dragon Ball (1986), Dragon Ball Z (1989)',
     synopsis: '''
-  Bulma, seorang gadis berusia 16 tahun yang keras kepala, sedang dalam misi untuk menemukan Bola Naga yang legendaris—tujuh bola ajaib yang tersebar dan dapat mengabulkan satu permintaan bagi siapa pun yang menemukannya. Bulma hanya memiliki satu keinginan: mendapatkan pacar sempurna. Dalam perjalanannya, Bulma bertemu dengan Son Goku, seorang anak yatim piatu yang kuat dan hanya pernah mengenal satu manusia selain dirinya. Gokuu memiliki salah satu Bola Naga sebagai kenang-kenangan dari kakeknya yang telah tiada. Sebagai gantinya, Bulma mengajak Goku untuk menjadi teman dalam petualangannya.
+Bulma, a headstrong 16-year-old girl, is on a quest to find the mythical Dragon Balls—seven scattered magic orbs that grant the finder a single wish. She has but one desire in mind: a perfect boyfriend. On her journey, Bulma stumbles upon Gokuu Son, a powerful orphan who has only ever known one human besides her. Gokuu possesses one of the Dragon Balls, it being a memento from his late grandfather. In exchange for it, Bulma invites Gokuu to be a companion in her travels.
 
-  Bersama Bulma, Goku menemukan dunia yang benar-benar asing baginya. Musuh-musuh kuat juga berlomba-lomba mengejar Bola Naga, memaksa Goku untuk melampaui batasnya demi melindungi Bulma dan lingkaran sekutu mereka yang terus bertambah. Namun, Goku menyimpan rahasia yang bahkan tidak ia sadari; kekuatan luar biasa dalam dirinya berasal dari sumber misterius yang dapat mengancam banyak orang yang ia sayangi.
+By Bulma's side, Gokuu discovers a world completely alien to him. Powerful enemies embark on their own pursuits of the Dragon Balls, pushing Gokuu beyond his limits in order to protect Bulma and their growing circle of allies. However, Gokuu has secrets unbeknownst to even himself; the incredible strength within him stems from a mysterious source, one that threatens the many people he grows to hold dear.
 
-  Saat keahliannya dalam seni bela diri berkembang, Goku menarik lawan yang lebih kuat dengan rencana jahat yang dapat runtuh di bawah kekuatannya. Ia memulai perjalanan tanpa akhir untuk berlatih dan bertarung demi melindungi orang-orang tercinta dan nasib planet ini.
+As his prowess in martial arts flourishes, Gokuu attracts stronger opponents whose villainous plans could collapse beneath his might. He undertakes the endless venture of combat training to defend his loved ones and the fate of the planet itself.
   ''',
     imageAsset: 'images/dragonball.jpg',
     imageUrls: [
@@ -117,9 +117,9 @@ Dua puluh dua tahun kemudian, seorang pemuda bernama Monkey D. Luffy siap memula
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Bleach (2004)',
     synopsis: '''
-  Sejak kecil, siswa SMA Ichigo Kurosaki selalu bisa melihat roh orang yang telah meninggal. Namun, kemampuan tersebut tidak menghalanginya untuk menjalani kehidupan yang normal. Suatu hari, Ichigo kembali ke rumah dan menemukan seorang penyusup di kamarnya yang memperkenalkan dirinya sebagai Rukia Kuchiki, seorang Shinigami yang bertugas membantu jiwa-jiwa untuk berpindah ke alam baka. Percakapan mereka tiba-tiba terhenti ketika muncul Hollow—roh jahat yang dikenal karena memangsa jiwa. Saat Ichigo nekat mencoba menghentikan Hollow tersebut, Rukia turun tangan untuk melindunginya dari serangan balasan. Terluka parah dan tidak mampu melanjutkan pertarungan, Rukia mengusulkan rencana berisiko—memindahkan setengah kekuatan Shinigami-nya ke Ichigo. Ichigo menyetujui, dan secara mengejutkan, ia menyerap seluruh kekuatan Rukia, memungkinkannya untuk dengan mudah mengalahkan Hollow itu.
+For as long as he can remember, high school student Ichigo Kurosaki has been able to see the spirits of the dead, but that has not stopped him from leading an ordinary life. One day, Ichigo returns home to find an intruder in his room who introduces herself as Rukia Kuchiki, a Soul Reaper tasked with helping souls pass over. Suddenly, the two are jolted from their conversation when a Hollow—an evil spirit known for consuming souls—attacks. As Ichigo makes a brash attempt to stop the Hollow, Rukia steps in and shields him from a counterattack. Injured and unable to keep fighting, Rukia suggests a risky plan—transfer half of her Soul Reaper powers to Ichigo. He accepts and, to Rukia's surprise, ends up absorbing her powers entirely, allowing him to easily dispatch the Hollow.
 
-Kini menjadi seorang Shinigami, Ichigo harus mengambil alih tugas Rukia untuk membasmi Hollow dan melindungi roh, baik yang masih hidup maupun yang sudah mati. Bersama teman-temannya, Orihime Inoue dan Yasutora Sado—yang kemudian juga menemukan kemampuan spiritual mereka masing-masing—Ichigo segera menyadari bahwa konsekuensi dari menjadi seorang Shinigami dan berurusan dengan dunia roh jauh lebih besar daripada yang pernah ia bayangkan.
+Now a Soul Reaper himself, Ichigo must take up Rukia's duties of exterminating Hollows and protecting spirits, both living and dead. Along with his friends Orihime Inoue and Yasutora Sado—who later discover spiritual abilities of their own—Ichigo soon learns that the consequences of becoming a Soul Reaper and dealing with the world of spirits are far greater than he ever imagined.
 ''',
     imageAsset: 'images/bleach.jpg',
     imageUrls: [
@@ -142,9 +142,9 @@ Kini menjadi seorang Shinigami, Ichigo harus mengambil alih tugas Rukia untuk me
     serialization: 'Bessatsu Shounen Magazine',
     animeAdaptation: 'Attack on Titan Season 1 (2013), Season 2 (2017), Season 3 (2018), Season 4: The Final Season (2020)',
     synopsis: '''
-Ratusan tahun yang lalu, makhluk-makhluk mengerikan yang menyerupai manusia muncul. Para raksasa tak berakal ini, yang disebut Titan, menjadi ancaman eksistensial karena memangsa manusia tanpa henti untuk memuaskan nafsu makan mereka yang tampaknya tidak berujung. Tidak mampu melawan Titan secara efektif, umat manusia terpaksa mengurung diri mereka di dalam tembok besar yang mengelilingi apa yang diyakini sebagai tempat perlindungan terakhir bagi umat manusia di dunia.
+Hundreds of years ago, horrifying creatures which resembled humans appeared. These mindless, towering giants, called Titans, proved to be an existential threat, as they preyed on whatever humans they could find in order to satisfy a seemingly unending appetite. Unable to effectively combat the Titans, mankind was forced to barricade themselves within large walls surrounding what may very well be humanity's last safe haven in the world.
 
-Di masa kini, kehidupan di dalam tembok telah menemukan kedamaian, karena para penduduk tidak menghadapi ancaman Titan selama bertahun-tahun. Eren Yeager, Mikasa Ackerman, dan Armin Arlert adalah tiga anak muda yang bermimpi menjelajahi dunia luar setelah tumbuh mendengar cerita tentang keajaiban di luar tembok. Namun, keadaan damai itu tiba-tiba hancur ketika Titan raksasa setinggi 60 meter menyerang. Mereka segera menyadari betapa kejamnya dunia yang mereka tinggali. Pada hari itu, Eren berjanji pada dirinya sendiri untuk melakukan apa pun yang diperlukan demi melenyapkan setiap Titan dari muka bumi, dengan harapan bahwa suatu hari nanti, umat manusia dapat kembali hidup di luar tembok tanpa rasa takut.
+In the present day, life within the walls has finally found peace, since the residents have not dealt with Titans for many years. Eren Yeager, Mikasa Ackerman, and Armin Arlert are three young children who dream of experiencing all that the world has to offer, having grown up hearing stories of the wonders beyond the walls. But when the state of tranquility is suddenly shattered by the attack of a massive 60-meter Titan, they quickly learn just how cruel the world can be. On that day, Eren makes a promise to himself that he will do whatever it takes to eradicate every single Titan off the face of the Earth, with the hope that one day, humanity will once again be able to live outside the walls without fear.
   ''',
     imageAsset: 'images/AOT.jpg',
     imageUrls: [
@@ -167,9 +167,9 @@ Di masa kini, kehidupan di dalam tembok telah menemukan kedamaian, karena para p
     serialization: 'Tonari no Young Jump',
     animeAdaptation: 'One Punch Man (2015), One Punch Man 2nd Season (2019)',
     synopsis: '''
-Setelah berlatih keras selama tiga tahun, Saitama yang awalnya orang biasa memperoleh kekuatan luar biasa yang memungkinkannya mengalahkan siapa saja dan apa saja hanya dengan satu pukulan. Ia memutuskan untuk memanfaatkan kekuatannya dengan menjadi seorang pahlawan. Namun, Saitama dengan cepat merasa bosan karena selalu dengan mudah mengalahkan monster, dan ia berharap menemukan lawan yang mampu memberinya tantangan untuk mengembalikan semangatnya sebagai pahlawan.
+After rigorously training for three years, the ordinary Saitama has gained immense strength which allows him to take out anyone and anything with just one punch. He decides to put his new skill to good use by becoming a hero. However, he quickly becomes bored with easily defeating monsters, and wants someone to give him a challenge to bring back the spark of being a hero.
 
-Setelah menyaksikan kekuatan luar biasa Saitama, Genos, seorang cyborg, bertekad untuk menjadi muridnya. Di tengah perjalanan ini, Saitama menyadari bahwa dirinya tidak mendapatkan pengakuan yang layak dan tidak dikenal oleh masyarakat karena ia bukan bagian dari Asosiasi Pahlawan. Untuk meningkatkan reputasinya, Saitama memutuskan untuk mendaftar ke Asosiasi bersama Genos, sebagai imbalan atas kesediaannya menjadi muridnya. Bersama-sama, mereka mulai menaiki tangga menuju menjadi pahlawan sejati, dengan harapan menemukan musuh yang kuat dan meraih rasa hormat di sepanjang jalan.
+Upon bearing witness to Saitama's amazing power, Genos, a cyborg, is determined to become Saitama's apprentice. During this time, Saitama realizes he is neither getting the recognition that he deserves nor known by the people due to him not being a part of the Hero Association. Wanting to boost his reputation, Saitama decides to have Genos register with him, in exchange for taking him in as a pupil. Together, the two begin working their way up toward becoming true heroes, hoping to find strong enemies and earn respect in the process.
 ''',
     imageAsset: 'images/OPM.jpg',
     imageUrls: [
@@ -192,11 +192,11 @@ Setelah menyaksikan kekuatan luar biasa Saitama, Genos, seorang cyborg, bertekad
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Jujutsu Kaisen (2020), Jujutsu Kaisen 2nd Season (2023)',
     synopsis: '''
-Tersembunyi di hadapan mata, sebuah konflik kuno terus berlangsung. Monster-supernatural yang dikenal sebagai Curse meneror umat manusia dari bayang-bayang, sementara manusia-manusia kuat yang dikenal sebagai penyihir Jujutsu menggunakan seni mistis untuk memusnahkan mereka. Ketika siswa SMA Yuuji Itadori menemukan jari kering dari Curse legendaris, Sukuna Ryoumen, dia tiba-tiba terlibat dalam konflik berdarah ini.
+Hidden in plain sight, an age-old conflict rages on. Supernatural monsters known as Curses terrorize humanity from the shadows, and powerful humans known as Jujutsu sorcerers use mystical arts to exterminate them. When high school student Yuuji Itadori finds a dried-up finger of the legendary Curse Sukuna Ryoumen, he suddenly finds himself joining this bloody conflict.
 
-Diserang oleh Curse yang tertarik dengan kekuatan jari tersebut, Yuuji membuat keputusan ceroboh untuk melindungi dirinya, mendapatkan kekuatan untuk melawan Curse, namun tanpa sengaja membebaskan Sukuna yang jahat ke dunia sekali lagi. Meskipun Yuuji bisa mengendalikan dan mengurung Sukuna di tubuhnya, dunia Jujutsu mengklasifikasikan Yuuji sebagai Curse tingkat tinggi yang berbahaya dan harus dimusnahkan.
+Attacked by a Curse attracted to the finger's power, Yuuji makes a reckless decision to protect himself, gaining the power to combat Curses in the process but also unwittingly unleashing the malicious Sukuna into the world once more. Though Yuuji can control and confine Sukuna to his own body, the Jujutsu world classifies Yuuji as a dangerous, high-level Curse who must be exterminated.
 
-Ditahan dan dijatuhi hukuman mati, Yuuji bertemu dengan Satoru Gojou—seorang guru di Sekolah Jujutsu—yang menjelaskan bahwa meskipun eksekusinya sudah dekat, ada alternatif baginya. Sebagai wadah langka bagi Sukuna, jika Yuuji mati, maka Sukuna juga akan mati. Oleh karena itu, jika Yuuji memakan sisa-sisa Sukuna yang lainnya, maka eksekusinya akan benar-benar menghapuskan iblis jahat itu. Mengambil kesempatan ini untuk membuat dunia lebih aman dan hidup sedikit lebih lama, Yuuji mendaftar di Sekolah Tinggi Jujutsu Kota Tokyo, terjun ke medan pertempuran yang keras dan tanpa ampun.
+Detained and sentenced to death, Yuuji meets Satoru Gojou—a teacher at Jujutsu High School—who explains that despite his imminent execution, there is an alternative for him. Being a rare vessel to Sukuna, if Yuuji were to die, then Sukuna would perish too. Therefore, if Yuuji were to consume the many other remnants of Sukuna, then Yuuji's subsequent execution would truly eradicate the malicious demon. Taking up this chance to make the world safer and live his life for a little longer, Yuuji enrolls in Tokyo Prefectural Jujutsu High School, jumping headfirst into a harsh and unforgiving battlefield.
   ''',
     imageAsset: 'images/JJK.jpg',
     imageUrls: [
@@ -219,7 +219,7 @@ Ditahan dan dijatuhi hukuman mati, Yuuji bertemu dengan Satoru Gojou—seorang g
     serialization: 'V-Jump',
     animeAdaptation: 'No Anime Adaptation Yet',
     synopsis: '''
-Dalam sebuah putaran nasib yang kejam, kehidupan Boruto dan Kawaki telah dipertukarkan karena sebuah jutsu kuat. Kini, Boruto yang dicap sebagai pengkhianat, melarikan diri dari desanya dan berlatih bersama Sasuke. Namun, ketika Konoha diserang, saatnya bagi Boruto yang kini dewasa untuk kembali ke rumah dan menunjukkan seberapa kuat dirinya!.
+In a cruel twist of fate, Boruto's and Kawaki's lives have been switched due to a powerful jutsu. Now branded a traitor, Boruto is on the run from his village and training with Sasuke. But when Konoha comes under attack, it's time for a grown-up Boruto to return home and show how powerful he's become!
 ''',
     imageAsset: 'images/BTBV.jpg',
     imageUrls: [
@@ -241,11 +241,9 @@ Dalam sebuah putaran nasib yang kejam, kehidupan Boruto dan Kawaki telah dipertu
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Hunter x Hunter (2011)',
     synopsis: '''
-  Bulma, seorang gadis berusia 16 tahun yang keras kepala, sedang dalam misi untuk menemukan Bola Naga yang legendaris—tujuh bola ajaib yang tersebar dan dapat mengabulkan satu permintaan bagi siapa pun yang menemukannya. Bulma hanya memiliki satu keinginan: mendapatkan pacar sempurna. Dalam perjalanannya, Bulma bertemu dengan Son Goku, seorang anak yatim piatu yang kuat dan hanya pernah mengenal satu manusia selain dirinya. Gokuu memiliki salah satu Bola Naga sebagai kenang-kenangan dari kakeknya yang telah tiada. Sebagai gantinya, Bulma mengajak Goku untuk menjadi teman dalam petualangannya.
+"Secret treasure hoards, undiscovered wealth... mystical places, unexplored frontiers... 'The mysterious unknown.' There's magic in such words for those captivated by its spell. They are called 'Hunters'!"
 
-  Bersama Bulma, Goku menemukan dunia yang benar-benar asing baginya. Musuh-musuh kuat juga berlomba-lomba mengejar Bola Naga, memaksa Goku untuk melampaui batasnya demi melindungi Bulma dan lingkaran sekutu mereka yang terus bertambah. Namun, Goku menyimpan rahasia yang bahkan tidak ia sadari; kekuatan luar biasa dalam dirinya berasal dari sumber misterius yang dapat mengancam banyak orang yang ia sayangi.
-
-  Saat keahliannya dalam seni bela diri berkembang, Goku menarik lawan yang lebih kuat dengan rencana jahat yang dapat runtuh di bawah kekuatannya. Ia memulai perjalanan tanpa akhir untuk berlatih dan bertarung demi melindungi orang-orang tercinta dan nasib planet ini.
+Gon Freecss wants to become a Hunter so he can find his father, a man who abandoned him to pursue a life of adventure. But it's not that simple: only one in one hundred thousand can pass the Hunter Exam, and that is just the first obstacle on his journey. During the Hunter Exam, Gon befriends many other potential Hunters, such as the mysterious Killua; the revenge-driven Kurapika; and Leorio, who aims to become a doctor. There's a world of adventure and peril awaiting, and those who embrace it with open arms can become the greatest Hunters of them all!
   ''',
     imageAsset: 'images/HXH.jpg',
     imageUrls: [
@@ -268,11 +266,11 @@ Dalam sebuah putaran nasib yang kejam, kehidupan Boruto dan Kawaki telah dipertu
     serialization: 'Shounen Jump+',
     animeAdaptation: 'Spy x Family (2022), Spy x Family Season 2 (2023), Spy x Family Season 3 (2025)',
     synopsis: '''
-Bagi agen yang dikenal sebagai "Twilight," tidak ada tugas yang terlalu berat jika itu demi perdamaian. Sebagai mata-mata terbaik Westalis, Twilight bekerja tanpa lelah untuk mencegah ekstremis memicu perang dengan negara tetangga, Ostania. Dalam misi terbarunya, ia harus menyelidiki politisi Ostania, Donovan Desmond, dengan menyusup ke sekolah putranya: Akademi Eden yang bergengsi. Maka, agen ini menghadapi tantangan paling sulit dalam kariernya: menikah, memiliki anak, dan berpura-pura menjadi keluarga.
+For the agent known as "Twilight," no order is too tall if it is for the sake of peace. Operating as Westalis' master spy, Twilight works tirelessly to prevent extremists from sparking a war with neighboring country Ostania. For his latest mission, he must investigate Ostanian politician Donovan Desmond by infiltrating his son's school: the prestigious Eden Academy. Thus, the agent faces the most difficult task of his career: get married, have a child, and play family.
 
-Twilight, yang menggunakan nama samaran "Loid Forger," dengan cepat mengadopsi Anya, seorang anak yatim piatu yang tidak mencolok, untuk berperan sebagai putri berusia enam tahun dan calon siswa Akademi Eden. Untuk seorang istri, ia bertemu dengan Yor Briar, seorang pegawai kantoran yang pelupa yang juga membutuhkan pasangan pura-pura untuk mengesankan teman-temannya. Namun, Loid bukan satu-satunya yang memiliki identitas tersembunyi. Yor ternyata adalah seorang pembunuh mematikan yang dikenal sebagai "Thorn Princess." Bagi Yor, menikah dengan Loid adalah penyamaran yang sempurna. Sementara itu, Anya bukanlah gadis biasa seperti yang terlihat; ia adalah seorang esper, hasil eksperimen rahasia yang memungkinkannya membaca pikiran. Meski mengetahui identitas asli kedua orang tuanya, Anya sangat senang memiliki orang tua keren yang merupakan agen rahasia! Tentu saja, ia tidak akan pernah memberi tahu mereka, karena itu akan merusak keseruan.
+Twilight, or "Loid Forger," quickly adopts the unassuming orphan Anya to play the role of a six-year-old daughter and prospective Eden Academy student. For a wife, he comes across Yor Briar, an absent-minded office worker who needs a pretend partner of her own to impress her friends. However, Loid is not the only one with a hidden nature. Yor moonlights as the lethal assassin "Thorn Princess." For her, marrying Loid creates the perfect cover. Meanwhile, Anya is not the ordinary girl she appears to be; she is an esper, the product of secret experiments that allow her to read minds. Although she uncovers their true identities, Anya is thrilled that her new parents are cool secret agents! She would never tell them, of course. That would ruin the fun.
 
-Di bawah kedok keluarga "Forger," mata-mata, pembunuh, dan esper ini harus berperan sebagai keluarga sambil menjalankan agenda masing-masing. Meskipun mereka hanya berpura-pura, mereka segera menyadari bahwa keluarga adalah sesuatu yang jauh lebih dalam daripada sekadar hubungan darah.
+Under the guise of "The Forgers," the spy, the assassin, and the esper must act as a family while carrying out their own agendas. Although these liars and misfits are only playing parts, they soon find that family is about far more than blood relations.
   ''',
     imageAsset: 'images/SXF.jpg',
     imageUrls: [
@@ -295,11 +293,11 @@ Di bawah kedok keluarga "Forger," mata-mata, pembunuh, dan esper ini harus berpe
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Death Note (2006)',
     synopsis: '''
-Ryuk, seorang dewa kematian, menjatuhkan Death Note ke dunia manusia demi kesenangannya sendiri. Di Jepang, seorang siswa SMA jenius bernama Light Yagami menemukan buku itu. Di dalamnya, terdapat pesan mengerikan: siapa pun yang namanya ditulis di dalamnya akan mati. Awalnya, Light merasa buku itu tidak masuk akal; namun, ketika ia menguji kekuatannya dengan menulis nama seorang kriminal, orang tersebut tiba-tiba tewas.
+Ryuk, a god of death, drops his Death Note into the human world for personal pleasure. In Japan, prodigious high school student Light Yagami stumbles upon it. Inside the notebook, he finds a chilling message: those whose names are written in it shall die. Its nonsensical nature amuses Light; but when he tests its power by writing the name of a criminal in it, they suddenly meet their demise.
 
-Menyadari potensi luar biasa Death Note, Light memulai serangkaian pembunuhan dengan nama samaran "Kira," bertekad untuk membersihkan dunia dari individu korup dan menciptakan masyarakat sempurna di mana kejahatan tidak lagi ada. Namun, polisi segera menyadari keberadaan Kira dan meminta bantuan L—seorang detektif jenius—untuk mengungkap pelakunya.
+Realizing the Death Note's vast potential, Light commences a series of nefarious murders under the pseudonym "Kira," vowing to cleanse the world of corrupt individuals and create a perfect society where crime ceases to exist. However, the police quickly catch on, and they enlist the help of L—a mastermind detective—to uncover the culprit.
 
-**Death Note** menceritakan kisah mendebarkan tentang pertarungan kecerdasan antara Light dan L, sebuah duel yang akan menentukan masa depan dunia.
+Death Note tells the thrilling tale of Light and L as they clash in a great battle-of-minds, one that will determine the future of the world.
   ''',
     imageAsset: 'images/DN.jpg',
     imageUrls: [
@@ -322,9 +320,9 @@ Menyadari potensi luar biasa Death Note, Light memulai serangkaian pembunuhan de
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Boku no Hero Academia (2016), 2nd Season (2017), 3rd Season (2018), 4th Season (2019), 5th Season (2021), 6th Season (2022)',
     synopsis: '''
-Suatu hari, seorang anak laki-laki berusia empat tahun menyadari kenyataan pahit: dunia ini tidak adil. Delapan puluh persen populasi dunia memiliki kemampuan khusus yang disebut "quirk," yang memungkinkan banyak orang mewujudkan impian masa kecil mereka untuk menjadi pahlawan super. Sayangnya, Izuku Midoriya adalah salah satu dari sedikit orang yang lahir tanpa quirk, sehingga sering mengalami diskriminasi karenanya. Meski begitu, Izuku tidak pernah menyerah pada mimpinya untuk menjadi pahlawan; dengan tekad kuat untuk mencapai hal yang tampaknya mustahil, ia menargetkan akademi pelatihan pahlawan elit, UA High.
+One day, a four-year-old boy came to a sudden realization: the world is not fair. Eighty percent of the world's population wield special abilities, known as "quirks," which have given many the power to make their childhood dreams of becoming a superhero a reality. Unfortunately, Izuku Midoriya was one of the few born without a quirk, suffering from discrimination because of it. Yet, he refuses to give up on his dream of becoming a hero; determined to do the impossible, Izuku sets his sights on the elite hero training academy, UA High.
 
-Namun, segalanya berubah setelah pertemuan tak terduga dengan pahlawan nomor satu sekaligus idolanya, All Might. Mengetahui bahwa mimpinya masih bisa dicapai, Izuku menjalani pelatihan khusus dan bekerja lebih keras dari sebelumnya. Akhirnya, ia mewarisi kekuatan All Might, dan dengan kemampuan barunya, Izuku berhasil masuk ke sekolah impiannya. Di sanalah ia memulai perjalanan berat untuk menjadi penerus pahlawan terbaik di dunia.
+However, everything changes after a chance meeting with the number one hero and Izuku's idol, All Might. Discovering that his dream is not a dead end, the powerless boy undergoes special training, working harder than ever before. Eventually, this leads to him inheriting All Might's power, and with his newfound abilities, gets into his school of choice, beginning his grueling journey to become the successor of the best hero on the planet.
   ''',
     imageAsset: 'images/BNH.jpg',
     imageUrls: [
@@ -347,9 +345,9 @@ Namun, segalanya berubah setelah pertemuan tak terduga dengan pahlawan nomor sat
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Kimetsu no Yaiba (2019), Mugen Train Arc and Entertainment District Arc (2021/2022), Swordsmith Village Arc (2023), Hashira Training Arc (2024)',
     synopsis: '''
-Tanjirou Kamado tinggal bersama keluarganya yang miskin di sebuah gunung terpencil. Sebagai anak tertua, ia memikul tanggung jawab untuk menghidupi keluarganya setelah ayahnya meninggal. Suatu hari di musim dingin, ia pergi ke desa terdekat untuk menjual arang. Saat malam tiba, ia terpaksa bermalam di rumah seorang pria tua yang memperingatkannya tentang makhluk aneh yang berkeliaran di malam hari: iblis jahat yang haus akan daging manusia.
+Tanjirou Kamado lives with his impoverished family on a remote mountain. As the oldest sibling, he took upon the responsibility of ensuring his family's livelihood after the death of his father. On a cold winter day, he goes down to the local village in order to sell some charcoal. As dusk falls, he is forced to spend the night in the house of a curious man who cautions him of strange creatures that roam the night: malevolent demons who crave human flesh.
 
-Ketika akhirnya Tanjirou kembali ke rumah, mimpi buruk terburuknya menjadi kenyataan. Seluruh keluarganya telah dibantai dengan kejam, kecuali adiknya, Nezuko, yang berubah menjadi iblis pemakan manusia. Dipenuhi kebencian dan keputusasaan, Tanjirou berusaha keras menghentikan Nezuko menyerang orang lain. Ia pun memulai perjalanan untuk membalas dendam atas keluarganya dan mencari cara untuk mengembalikan Nezuko menjadi manusia.
+When he finally makes his way home, Tanjirou's worst nightmare comes true. His entire family has been brutally slaughtered with the sole exception of his sister Nezuko, who has turned into a flesh-eating demon. Engulfed in hatred and despair, Tanjirou desperately tries to stop Nezuko from attacking other people, setting out on a journey to avenge his family and find a way to turn his beloved sister back into a human.
   ''',
     imageAsset: 'images/DS.jpg',
     imageUrls: [
