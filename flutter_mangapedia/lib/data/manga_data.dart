@@ -137,10 +137,11 @@ Now a Soul Reaper himself, Ichigo must take up Rukia's duties of exterminating H
     genre: 'Action, Drama, Military',
     releaseDate: 'Sep 9, 2009',
     malScore: '8.55',
-    author: 'Isayama, Hajime (Story & Art)',
+    author: 'Hajime Isayama (Story & Art)',
     status: 'Finished',
     serialization: 'Bessatsu Shounen Magazine',
-    animeAdaptation: 'Attack on Titan Season 1 (2013), Season 2 (2017), Season 3 (2018), Season 4: The Final Season (2020)',
+    animeAdaptation:
+        'Attack on Titan Season 1 (2013), Season 2 (2017), Season 3 (2018), Season 4: The Final Season (2020)',
     synopsis: '''
 Hundreds of years ago, horrifying creatures which resembled humans appeared. These mindless, towering giants, called Titans, proved to be an existential threat, as they preyed on whatever humans they could find in order to satisfy a seemingly unending appetite. Unable to effectively combat the Titans, mankind was forced to barricade themselves within large walls surrounding what may very well be humanity's last safe haven in the world.
 
@@ -162,7 +163,7 @@ In the present day, life within the walls has finally found peace, since the res
     genre: 'Parody, Super Power, Comedy',
     releaseDate: 'Jun 14, 2012',
     malScore: '8.72',
-    author: 'Murata, Yusuke (Art), ONE (Story)',
+    author: 'Yusuke Murata (Art), ONE (Story)',
     status: 'Ongoing',
     serialization: 'Tonari no Young Jump',
     animeAdaptation: 'One Punch Man (2015), One Punch Man 2nd Season (2019)',
@@ -187,7 +188,7 @@ Upon bearing witness to Saitama's amazing power, Genos, a cyborg, is determined 
     genre: 'Action, Supernatural',
     releaseDate: 'Mar 5, 2018',
     malScore: '8.29',
-    author: 'Akutami, Gege (Story & Art)',
+    author: 'Gege Akutami(Story & Art)',
     status: 'Finished',
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Jujutsu Kaisen (2020), Jujutsu Kaisen 2nd Season (2023)',
@@ -214,7 +215,7 @@ Detained and sentenced to death, Yuuji meets Satoru Gojou—a teacher at Jujutsu
     genre: 'Action, Adventure, Fantasy',
     releaseDate: 'Aug 21, 2023',
     malScore: '7.91',
-    author: 'Kishimoto, Masashi (Story), Ikemoto, Mikio (Art)',
+    author: 'Masashi Kishimoto (Story), Mikio Ikemoto (Art)',
     status: 'Ongoing',
     serialization: 'V-Jump',
     animeAdaptation: 'No Anime Adaptation Yet',
@@ -230,13 +231,13 @@ In a cruel twist of fate, Boruto's and Kawaki's lives have been switched due to 
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400004',
   ),
-    Manga(
+  Manga(
     title: 'Hunter x Hunter',
     chapter: '410',
     genre: 'Action, Adventure, Fantasy',
     releaseDate: 'Mar 3, 1998',
     malScore: '8.75',
-    author: 'Togashi, Yoshihiro (Story & Art)',
+    author: 'Yoshihiro Togashi (Story & Art)',
     status: 'Finished',
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Hunter x Hunter (2011)',
@@ -255,16 +256,17 @@ Gon Freecss wants to become a Hunter so he can find his father, a man who abando
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100015',
   ),
-    Manga(
+  Manga(
     title: 'Spy x Family',
     chapter: '108+ (Ongoing)',
     genre: 'Action, Comedy, Family',
     releaseDate: 'Mar 25, 2019',
     malScore: '8.50',
-    author: 'Endou, Tatsuya (Story & Art)',
+    author: 'Tatsuya Endou (Story & Art)',
     status: 'Ongoing',
     serialization: 'Shounen Jump+',
-    animeAdaptation: 'Spy x Family (2022), Spy x Family Season 2 (2023), Spy x Family Season 3 (2025)',
+    animeAdaptation:
+        'Spy x Family (2022), Spy x Family Season 2 (2023), Spy x Family Season 3 (2025)',
     synopsis: '''
 For the agent known as "Twilight," no order is too tall if it is for the sake of peace. Operating as Westalis' master spy, Twilight works tirelessly to prevent extremists from sparking a war with neighboring country Ostania. For his latest mission, he must investigate Ostanian politician Donovan Desmond by infiltrating his son's school: the prestigious Eden Academy. Thus, the agent faces the most difficult task of his career: get married, have a child, and play family.
 
@@ -282,13 +284,13 @@ Under the guise of "The Forgers," the spy, the assassin, and the esper must act 
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100143',
   ),
-    Manga(
+  Manga(
     title: 'Death Note',
     chapter: '108',
     genre: 'Supernatural, Suspense, Psychological',
     releaseDate: 'Dec 1, 2003',
     malScore: '8.69',
-    author: 'Obata, Takeshi (Art), Ohba, Tsugumi (Story)',
+    author: 'Takeshi Obata (Art), Tsugumi Ohba (Story)',
     status: 'Finished',
     serialization: 'Weekly Shounen Jump',
     animeAdaptation: 'Death Note (2006)',
@@ -309,16 +311,17 @@ Death Note tells the thrilling tale of Light and L as they clash in a great batt
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100008',
   ),
-    Manga(
+  Manga(
     title: 'Boku no Hero Academia (My Hero Academia)',
     chapter: '432',
     genre: 'School, Super Power, Action',
     releaseDate: 'Jul 7, 2014',
     malScore: '7.97',
-    author: 'Horikoshi, Kouhei (Story & Art)',
+    author: 'Kouhei Horikoshi (Story & Art)',
     status: 'Finished',
     serialization: 'Weekly Shounen Jump',
-    animeAdaptation: 'Boku no Hero Academia (2016), 2nd Season (2017), 3rd Season (2018), 4th Season (2019), 5th Season (2021), 6th Season (2022)',
+    animeAdaptation:
+        'Boku no Hero Academia (2016), 2nd Season (2017), 3rd Season (2018), 4th Season (2019), 5th Season (2021), 6th Season (2022)',
     synopsis: '''
 One day, a four-year-old boy came to a sudden realization: the world is not fair. Eighty percent of the world's population wield special abilities, known as "quirks," which have given many the power to make their childhood dreams of becoming a superhero a reality. Unfortunately, Izuku Midoriya was one of the few born without a quirk, suffering from discrimination because of it. Yet, he refuses to give up on his dream of becoming a hero; determined to do the impossible, Izuku sets his sights on the elite hero training academy, UA High.
 
@@ -334,16 +337,17 @@ However, everything changes after a chance meeting with the number one hero and 
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400001',
   ),
-    Manga(
+  Manga(
     title: 'Kimetsu no Yaiba (Demon Slayer)',
     chapter: '207',
     genre: 'Action, Fantasy, Supernatural',
     releaseDate: 'Feb 15, 2016',
     malScore: '8.15',
-    author: 'Gotouge, Koyoharu (Story & Art)',
+    author: 'Koyoharu Gotouge (Story & Art)',
     status: 'Finished',
     serialization: 'Weekly Shounen Jump',
-    animeAdaptation: 'Kimetsu no Yaiba (2019), Mugen Train Arc and Entertainment District Arc (2021/2022), Swordsmith Village Arc (2023), Hashira Training Arc (2024)',
+    animeAdaptation:
+        'Kimetsu no Yaiba (2019), Mugen Train Arc and Entertainment District Arc (2021/2022), Swordsmith Village Arc (2023), Hashira Training Arc (2024)',
     synopsis: '''
 Tanjirou Kamado lives with his impoverished family on a remote mountain. As the oldest sibling, he took upon the responsibility of ensuring his family's livelihood after the death of his father. On a cold winter day, he goes down to the local village in order to sell some charcoal. As dusk falls, he is forced to spend the night in the house of a curious man who cautions him of strange creatures that roam the night: malevolent demons who crave human flesh.
 
@@ -359,7 +363,57 @@ When he finally makes his way home, Tanjirou's worst nightmare comes true. His e
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100009',
   ),
-  //   Manga(
+  Manga(
+    title: 'Blue Lock',
+    chapter: '290+ (Ongoing)',
+    genre: 'Sport, Drama, Thriller',
+    releaseDate: 'Aug 1, 2018',
+    malScore: '8.48',
+    author: 'Muneyuki Kaneshiro (Story), Yuusuke Nomura (Art)',
+    status: 'Ongoing',
+    serialization: 'Shounen Magazine (Weekly)',
+    animeAdaptation: 'Blue Lock (2022/2023), Blue Lock vs. U-20 Japan (2024)',
+    synopsis: '''
+After reflecting on the current state of Japanese soccer, the Japanese Football Association decides to hire the enigmatic and eccentric coach Jinpachi Ego to achieve their dream of winning the World Cup. Believing that Japan has lacked an egoistic striker hungry for goals, Jinpachi initiates the Blue Lock—a prison-like facility where three hundred talented strikers from high schools all over Japan are isolated and pitted against each other. The sole survivor of Blue Lock will earn the right to become the national team's striker, and those who are defeated shall be banned from joining the team forever.
+
+Selected to join this risky project is Yoichi Isagi, a striker who failed to bring his high school soccer team to the national tournament. After choosing to pass to a teammate who missed instead of scoring on his own, he could not help but wonder if the results would have been different had he been more selfish. Using this golden opportunity given by the Blue Lock Project, Yoichi aims to clear his doubts and chase his ultimate desire—to become the greatest striker in the world and lead Japan to World Cup glory.
+  ''',
+    imageAsset: 'images/bluelock.jpg',
+    imageUrls: [
+      'https://www.manga-news.com/public/images/vols/blue-lock-1-pika.jpg',
+      'https://www.manga-news.com/public/images/vols/bluelock-2-pika.jpg',
+      'https://www.manga-news.com/public/images/vols/blue-lock-3-pika.jpg',
+      'https://www.manga-news.com/public/images/vols/blue-lock-4-pika.jpg',
+      'https://www.manga-news.com/public/images/vols/Blue_Lock-5-pika.jpg',
+    ],
+    mangaLink: 'https://w5.readbluelock.com/',
+  ),
+  Manga(
+    title: 'Sousou no Frieren',
+    chapter: '141+ (Ongoing)',
+    genre: 'Adventure, Drama, Fantasy',
+    releaseDate: 'Apr 28, 2020',
+    malScore: '8.83',
+    author: 'Kanehito Yamada (Story), Tsukasa Abe (Art)',
+    status: 'Ongoing',
+    serialization: 'Shounen Sunday',
+    animeAdaptation: 'Sousou no Frieren (2022/2023)',
+    synopsis: '''
+The Demon King has been defeated, and the victorious hero party returns home before disbanding. The four—mage Frieren, hero Himmel, priest Heiter, and warrior Eisen—reminisce about their decade-long journey as the moment to bid each other farewell arrives. But the passing of time is different for elves, thus Frieren witnesses her companions slowly pass away one by one.
+
+Before his death, Heiter manages to foist a young human apprentice called Fern onto Frieren. Driven by the elf's passion for collecting a myriad of magic spells, the pair embarks on a seemingly aimless journey, revisiting the places that the heroes of yore had visited. Along their travels, Frieren slowly confronts her regrets of missed opportunities to form deeper bonds with her now-deceased comrades.
+  ''',
+    imageAsset: 'images/Frieren.jpg',
+    imageUrls: [
+      'https://meo.comick.pictures/mnWN5e.jpg',
+      'https://meo.comick.pictures/5pqWam.jpg',
+      'https://meo.comick.pictures/2NRlgZ.jpg',
+      'https://meo.comick.pictures/R4mXM.jpg',
+      'https://meo.comick.pictures/rGkdd.jpg',
+    ],
+    mangaLink: 'https://www.frieren.online/',
+  ),
+  // Manga(
   //   title: '4',
   //   chapter: '',
   //   genre: '',
