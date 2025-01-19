@@ -132,7 +132,7 @@ Now a Soul Reaper himself, Ichigo must take up Rukia's duties of exterminating H
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100004',
   ),
   Manga(
-    title: 'Shingeki no Kyojin (Attack on Titan)',
+    title: 'Attack on Titan',
     chapter: '141',
     genre: 'Action, Drama, Military',
     releaseDate: 'Sep 9, 2009',
@@ -312,7 +312,7 @@ Death Note tells the thrilling tale of Light and L as they clash in a great batt
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100008',
   ),
   Manga(
-    title: 'Boku no Hero Academia (My Hero Academia)',
+    title: 'My Hero Academia',
     chapter: '432',
     genre: 'School, Super Power, Action',
     releaseDate: 'Jul 7, 2014',
@@ -338,7 +338,7 @@ However, everything changes after a chance meeting with the number one hero and 
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400001',
   ),
   Manga(
-    title: 'Kimetsu no Yaiba (Demon Slayer)',
+    title: 'Demon Slayer',
     chapter: '207',
     genre: 'Action, Fantasy, Supernatural',
     releaseDate: 'Feb 15, 2016',
@@ -413,27 +413,108 @@ Before his death, Heiter manages to foist a young human apprentice called Fern o
     ],
     mangaLink: 'https://www.frieren.online/',
   ),
-  // Manga(
-  //   title: '4',
-  //   chapter: '',
-  //   genre: '',
-  //   releaseDate: '',
-  //   malScore: '',
-  //   author: '',
-  //   status: '',
-  //   serialization: '',
-  //   animeAdaptation: '',
-  //   synopsis: '''
+  Manga(
+    title: '[Oshi no Ko]',
+    chapter: '168',
+    genre: 'Drama, Supernatural',
+    releaseDate: 'Apr 23, 2020',
+    malScore: '8.22',
+    author: 'Aka Akasaka (Story), Mengo Yokoyari (Art)',
+    status: 'Finished',
+    serialization: 'Young Jump',
+    animeAdaptation:
+        '[Oshi no Ko] (2023), 2nd Season (2024), 3rd Season (2025)',
+    synopsis: '''
+Sixteen-year-old Ai Hoshino is a talented and beautiful idol who is adored by her fans. She is the personification of a pure, young maiden. But all that glitters is not gold.
 
-  // ''',
-  //   imageAsset: 'images/',
-  //   imageUrls: [
-  //     '',
-  //     '',
-  //     '',
-  //     '',
-  //     '',
-  //   ],
-  //   mangaLink: '',
-  // ),
+Gorou Amemiya is a countryside gynecologist and a big fan of Ai. So when the pregnant idol shows up at his hospital, he is beyond bewildered. Gorou promises her a safe delivery. Little does he know, an encounter with a mysterious figure would result in his untimely death—or so he thought.
+
+Opening his eyes in the lap of his beloved idol, Gorou finds that he has been reborn as Aquamarine Hoshino—Ai's newborn son! With his world turned upside down, Gorou soon learns that the world of showbiz is paved with thorns, where talent does not always beget success. Will he manage to protect Ai's smile that he loves so much with the help of an eccentric and unexpected ally?
+
+  ''',
+    imageAsset: 'images/oshinoko.jpg',
+    imageUrls: [
+      'https://meo.comick.pictures/Krglpn.jpg',
+      'https://meo.comick.pictures/mnWleN.jpg',
+      'https://meo.comick.pictures/5pq5bB.jpg',
+      'https://meo.comick.pictures/w7p2jM.jpg',
+      'https://meo.comick.pictures/vL7Zl.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100191',
+  ),
+  Manga(
+    title: 'Chainsaw Man',
+    chapter: '190+ (Ongoing)',
+    genre: 'Action, Fantasy, Supernatural',
+    releaseDate: 'Dec 3, 2018',
+    malScore: '8.70',
+    author: 'Tatsuki Fujimoto (Story & Art)',
+    status: 'Ongoing',
+    serialization: 'Shounen Jump+',
+    animeAdaptation: 'Chainsaw Man (2022), Chainsaw Man Movie: Reze-hen (2025)',
+    synopsis: '''
+Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.
+
+Unfortunately, he has outlived his usefulness and is murdered by a devil in contract with the yakuza. However, in an unexpected turn of events, Pochita merges with Denji's dead body and grants him the powers of a chainsaw devil. Now able to transform parts of his body into chainsaws, a revived Denji uses his new abilities to quickly and brutally dispatch his enemies. Catching the eye of the official devil hunters who arrive at the scene, he is offered work at the Public Safety Bureau as one of them. Now with the means to face even the toughest of enemies, Denji will stop at nothing to achieve his simple teenage dreams.
+  ''',
+    imageAsset: 'images/chainsawman.jpg',
+    imageUrls: [
+      'https://meo.comick.pictures/Og84N.png',
+      'https://meo.comick.pictures/xO7Qj.jpg',
+      'https://meo.comick.pictures/MRL4Q-s.jpg',
+      'https://meo.comick.pictures/GpXgD.jpg',
+      'https://meo.comick.pictures/j8xaM.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/100037',
+  ),
+  Manga(
+    title: 'Vinland Saga',
+    chapter: '216+ (Ongoing)',
+    genre: 'Action, Adventure, Drama',
+    releaseDate: 'Apr 13, 2005',
+    malScore: '9.08',
+    author: 'Makoto Yukimura (Story & Art)',
+    status: 'Ongoing',
+    serialization: 'Afternoon',
+    animeAdaptation: 'Vinland Saga (2019), Season 2 (2023)',
+    synopsis: '''
+Thorfinn, son of one of the Vikings' greatest warriors, is among the finest fighters in the merry band of mercenaries run by the cunning Askeladd, an impressive feat for a person his age. However, Thorfinn is not part of the group for the plunder it entails—instead, for having caused his family great tragedy, the boy has vowed to kill Askeladd in a fair duel. Not yet skilled enough to defeat him, but unable to abandon his vengeance, Thorfinn spends his boyhood with the mercenary crew, honing his skills on the battlefield among the war-loving Danes, where killing is just another pleasure of life.
+
+One day, when Askeladd receives word that Danish prince Canute has been taken hostage, he hatches an ambitious plot—one that will decide the next King of England and drastically alter the lives of Thorfinn, Canute, and himself. Set in 11th-century Europe, Vinland Saga tells a bloody epic in an era where violence, madness, and injustice are inescapable, providing a paradise for the battle-crazed and utter hell for the rest who live in it.
+  ''',
+    imageAsset: 'images/vinlandSaga.jpg',
+    imageUrls: [
+      'https://meo.comick.pictures/8yK4K2.jpg',
+      'https://meo.comick.pictures/MNy4e.jpg',
+      'https://meo.comick.pictures/1bLaW.jpg',
+      'https://meo.comick.pictures/Kk1Kr.jpg',
+      'https://meo.comick.pictures/NO1b6.jpg',
+    ],
+    mangaLink: 'https://w1.vinlandsagamanga.net/',
+  ),
+  Manga(
+    title: 'Sakamoto Days',
+    chapter: '196+ (Ongoing)',
+    genre: 'Action, Comedy, Slice of Life',
+    releaseDate: 'Nov 21, 2020',
+    malScore: '8.16',
+    author: 'Yuuto Suzuki',
+    status: 'Ongoing',
+    serialization: 'Shounen Jump (Weekly)',
+    animeAdaptation: 'Sakamoto Days (2025)',
+    synopsis: '''
+Tarou Sakamoto was considered the greatest hitman of all time. Feared by many, he stood at the top of the underground world until he met and fell in love with a woman. As a result, Sakamoto abandoned his life of crime and now works as a convenience store clerk.
+
+Leaving his shady past behind proves more difficult than Sakamoto initially imagined. Many of his former rivals and partners do not believe that he has truly left the business and show up in hopes of taking him out. Barred from killing, Sakamoto must find creative ways to subdue his enemies and prevent them from bringing harm to his family, his store, and the small town he resides in.
+  ''',
+    imageAsset: 'images/sakamotoo.png',
+    imageUrls: [
+      'https://meo.comick.pictures/v8Y6qo.jpg',
+      'https://meo.comick.pictures/0Z5wE7-s.jpg',
+      'https://meo.comick.pictures/rxvZ6g-s.jpg',
+      'https://meo.comick.pictures/Z8B51x-s.jpg',
+      'https://meo.comick.pictures/nR210r-s.jpg',
+    ],
+    mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400005',
+  ),
 ];
