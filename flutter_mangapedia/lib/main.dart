@@ -4,6 +4,7 @@ import 'package:flutter_mangapedia/screens/detail_screen.dart';
 import 'package:flutter_mangapedia/screens/home_screen.dart';
 import 'package:flutter_mangapedia/screens/login_screen.dart';
 import 'package:flutter_mangapedia/screens/main_screen.dart';
+import 'package:flutter_mangapedia/screens/register_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
@@ -27,7 +28,8 @@ class MainApp extends StatelessWidget {
       home: isLoggedIn ? const MainScreen() : const LoginScreen(),
       routes: {
         '/login': (context) => const LoginScreen(),
-        '/home': (context) => const MainScreen()
+        '/home': (context) => const MainScreen(),
+        '/register': (context) => const RegisterScreen(),
      },
     //home: const HomeScreen(),
     //  home: DetailScreen(manga: mangaList[0]),

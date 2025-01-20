@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mangapedia/screens/favorite_screen.dart';
 import 'package:flutter_mangapedia/screens/home_screen.dart';
-import 'package:flutter_mangapedia/screens/profile_screen.dart'; // Ensure this import is correct
+import 'package:flutter_mangapedia/screens/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
