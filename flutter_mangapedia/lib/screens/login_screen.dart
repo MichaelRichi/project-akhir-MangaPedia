@@ -40,7 +40,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-        
                 //TODO: 2. TEXTFIELD EMAIL
                 const SizedBox(height: 16),
                 TextField(
@@ -62,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () async {
                       String email = _emailController.text;
                       String password = _passwordController.text;
-        
+
                       if (validateLogin(email, password)) {
                         SharedPreferences prefs =
                             await SharedPreferences.getInstance();
@@ -70,40 +69,41 @@ class _LoginScreenState extends State<LoginScreen> {
                         await prefs.setString('email', email);
                         Navigator.pushReplacementNamed(context, '/home');
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                            content: Text('Invalid email or password')));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text('Invalid email or password')));
                       }
                     },
                     child: const Text('Login')),
 
-                  const SizedBox(height: 20),
-                  // Link untuk Sign Up
-                  RichText(
-                    text: TextSpan(
-                      text: "Don't have an account?",
-                      style: const TextStyle(
-                          color: Colors.deepPurple, fontSize: 16),
-                      children: [
-                        TextSpan(
-                          text: " Register",
-                          style: const TextStyle(
-                            color: Colors.blue,
-                            fontSize: 16,
-                            decoration: TextDecoration.underline,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => RegisterScreen(),
-                                    ),
-                                  );
-                            },
+                const SizedBox(height: 20),
+                // Link untuk Sign Up
+                RichText(
+                  text: TextSpan(
+                    text: "Don't have an account?",
+                    style:
+                        const TextStyle(color: Colors.deepPurple, fontSize: 16),
+                    children: [
+                      TextSpan(
+                        text: " Register",
+                        style: const TextStyle(
+                          color: Colors.blue,
+                          fontSize: 16,
+                          decoration: TextDecoration.underline,
                         ),
-                      ],
-                    ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RegisterScreen(),
+                              ),
+                            );
+                          },
+                      ),
+                    ],
                   ),
+                ),
               ],
             ),
           ),
