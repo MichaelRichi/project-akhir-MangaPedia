@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mangapedia/screens/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +22,10 @@ class RegisterScreen extends StatelessWidget {
 }
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
@@ -29,18 +33,15 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
-  final RegExp emailRegex = RegExp(
-    r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-  );
+  final RegExp emailRegex =
+      RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Register'),
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32.0),
         child: Form(
@@ -146,32 +147,32 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               // Link Login
               const SizedBox(height: 25),
-                  RichText(
-                    text: TextSpan(
-                      text: "Already have an account?",
+              RichText(
+                text: TextSpan(
+                  text: "Already have an account?",
+                  style:
+                      const TextStyle(color: Colors.deepPurple, fontSize: 16),
+                  children: [
+                    TextSpan(
+                      text: " Login",
                       style: const TextStyle(
-                          color: Colors.deepPurple, fontSize: 16),
-                      children: [
-                        TextSpan(
-                          text: " Login",
-                          style: const TextStyle(
-                            color: Colors.blue,
-                            fontSize: 16,
-                            decoration: TextDecoration.underline,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => LoginScreen(),
-                                    ),
-                                  );
-                            },
-                        ),
-                      ],
+                        color: Colors.blue,
+                        fontSize: 16,
+                        decoration: TextDecoration.underline,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          );
+                        },
                     ),
-                  ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

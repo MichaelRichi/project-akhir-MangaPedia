@@ -1,8 +1,16 @@
 import 'package:flutter_mangapedia/models/user.dart';
 
 var userList = [
-  User(name: 'Krisna Riyandi', email: 'kris@gmail.com', password: '123', profilePicture : 'images/default_profile.jpg'),
-  User(name: 'Adi', email: 'adi@gmail.com', password: '123',profilePicture : 'images/default_profile.jpg'),
+  User(
+      name: 'Krisna Riyandi',
+      email: 'kris@gmail.com',
+      password: '123456',
+      profilePicture: 'images/default_profile.jpg'),
+  User(
+      name: 'Adi',
+      email: 'adi@gmail.com',
+      password: '123456',
+      profilePicture: 'images/default_profile.jpg'),
 ];
 // final List<Map<String, String>> userList = [
 //   {'email': 'user1@example.com', 'username': 'User1', 'profilePicture': 'assets/user1.png'},

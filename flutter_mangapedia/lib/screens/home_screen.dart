@@ -3,6 +3,7 @@ import 'package:flutter_mangapedia/data/manga_data.dart';
 import 'package:flutter_mangapedia/models/manga.dart';
 import 'package:flutter_mangapedia/screens/detail_screen.dart';
 import 'package:flutter_mangapedia/screens/ranking_screen.dart'; // Pastikan RankingScreen sudah diimport
+import 'package:flutter_mangapedia/screens/search_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,8 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // Fungsi untuk mencari manga berdasarkan nama
   void _searchManga(String query) {
     final results = mangaList
-        .where((manga) =>
-            manga.title.toLowerCase().contains(query.toLowerCase()))
+        .where(
+            (manga) => manga.title.toLowerCase().contains(query.toLowerCase()))
         .toList();
 
     setState(() {
@@ -59,17 +60,29 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               // Search Bar
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: TextField(
-                  controller: searchController,
-                  decoration: InputDecoration(
-                    hintText: 'Search Manga...',
-                    prefixIcon: const Icon(Icons.search),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SearchScreen()),
+                    );
+                  },
+                  child: AbsorbPointer(
+                    child: TextField(
+                      controller: searchController,
+                      decoration: InputDecoration(
+                        hintText: 'Search Manga...',
+                        prefixIcon: const Icon(Icons.search),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onChanged:
+                          _searchManga, // Panggil fungsi search saat teks berubah
                     ),
                   ),
-                  onChanged: _searchManga, // Panggil fungsi search saat teks berubah
                 ),
               ),
               // Tombol RANKING MANGA
@@ -82,7 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     backgroundColor: Colors.lightBlueAccent, // Warna tombol
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10), // Sudut melengkung
+                      borderRadius:
+                          BorderRadius.circular(10), // Sudut melengkung
                     ),
                   ),
                   child: const Row(
@@ -155,7 +169,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 16, bottom: 8),
+                              padding:
+                                  const EdgeInsets.only(left: 16, bottom: 8),
                               child: Row(
                                 children: [
                                   const Icon(

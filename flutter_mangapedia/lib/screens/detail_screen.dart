@@ -40,7 +40,9 @@ class _DetailScreenState extends State<DetailScreen> {
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      isFavorite = prefs.getBool('favorite_${loggedInUserEmail!}_${widget.manga.title}') ?? false;
+      isFavorite = prefs.getBool(
+              'favorite_${loggedInUserEmail!}_${widget.manga.title}') ??
+          false;
     });
   }
 
@@ -51,11 +53,13 @@ class _DetailScreenState extends State<DetailScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       isFavorite = !isFavorite;
-      prefs.setBool('favorite_${loggedInUserEmail!}_${widget.manga.title}', isFavorite);
+      prefs.setBool(
+          'favorite_${loggedInUserEmail!}_${widget.manga.title}', isFavorite);
     });
 
     // Perbarui daftar manga favorit user
-    List<String> favoriteMangas = prefs.getStringList('favoriteMangas_${loggedInUserEmail!}') ?? [];
+    List<String> favoriteMangas =
+        prefs.getStringList('favoriteMangas_${loggedInUserEmail!}') ?? [];
     String message;
 
     if (isFavorite) {
@@ -65,7 +69,8 @@ class _DetailScreenState extends State<DetailScreen> {
       favoriteMangas.remove(widget.manga.title);
       message = "${widget.manga.title} has been removed from favorites";
     }
-    await prefs.setStringList('favoriteMangas_${loggedInUserEmail!}', favoriteMangas);
+    await prefs.setStringList(
+        'favoriteMangas_${loggedInUserEmail!}', favoriteMangas);
 
     // Snackbar
     if (mounted) {
@@ -79,8 +84,8 @@ class _DetailScreenState extends State<DetailScreen> {
     }
     // Delay before navigating back to the previous page
     if (mounted) {
-      await Future.delayed(
-          const Duration(milliseconds: 500)); // Delay for smooth transition // Pop after delay
+      await Future.delayed(const Duration(
+          milliseconds: 500)); // Delay for smooth transition // Pop after delay
     }
   }
 
@@ -153,9 +158,10 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: IconButton(
                         onPressed: () {
                           _toggleFavorite().then((_) {
-                          if (!isFavorite) {
-                            Navigator.pop(context, true); // Mengirim nilai 'true' jika manga dihapus dari favorit
-                          } // Kirim 'true' saat favorit diubah
+                            if (!isFavorite) {
+                              Navigator.pop(context,
+                                  true); // Mengirim nilai 'true' jika manga dihapus dari favorit
+                            } // Kirim 'true' saat favorit diubah
                           });
                         },
                         icon: Icon(
@@ -317,7 +323,7 @@ class FullScreenImagePage extends StatefulWidget {
   const FullScreenImagePage({super.key, required this.imageUrl});
 
   @override
-  _FullScreenImagePageState createState() => _FullScreenImagePageState();
+  State<FullScreenImagePage> createState() => _FullScreenImagePageState();
 }
 
 class _FullScreenImagePageState extends State<FullScreenImagePage>
