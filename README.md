@@ -1,4 +1,3 @@
-# Mangapedia
 # Proyek UAS Pengembangan Aplikasi Bergerak 1
 
 ### Akun Login 1:
