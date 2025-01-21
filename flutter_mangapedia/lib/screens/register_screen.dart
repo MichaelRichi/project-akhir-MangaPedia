@@ -8,9 +8,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Register'),
-      ),
+      appBar: AppBar(),
       body: const RegisterPage(),
     );
   }
@@ -140,8 +138,7 @@ class _RegisterPageState extends State<RegisterPage> {
             RichText(
               text: TextSpan(
                 text: "Already have an account?",
-                style:
-                    const TextStyle(color: Colors.deepPurple, fontSize: 16),
+                style: const TextStyle(color: Colors.deepPurple, fontSize: 16),
                 children: [
                   TextSpan(
                     text: " Login",

@@ -228,7 +228,7 @@ In a cruel twist of fate, Boruto's and Kawaki's lives have been switched due to 
       'https://meo.comick.pictures/y7QJKo.jpg',
       'https://images.tokopedia.net/img/cache/700/VqbcmM/2024/9/2/02b9b50b-78aa-4c41-95fd-3f2ed10751ea.jpg',
       'https://pbs.twimg.com/media/GLTR-i5aoAIC-pb.png:large',
-      'https://meo.comick.pictures/l2qbv8.jpg',
+      'https://pbs.twimg.com/media/Ghe_fpfWYAA349J?format=jpg&name=medium',
     ],
     mangaLink: 'https://mangaplus.shueisha.co.jp/titles/400004',
   ),
